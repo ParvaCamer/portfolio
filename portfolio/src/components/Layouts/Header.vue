@@ -65,7 +65,7 @@ header {
     display: block;
     width: 100%;
     height: 3px;
-    background-color: #011502;
+    background-color: #557174;
     transition: transform 0.2s;
 }
 
@@ -79,7 +79,7 @@ header {
 
 .menu-icon span.active {
     transition: background-color .9s;
-    background-color: #CAF0CD;
+    background-color: #F7F7E8;
 }
 
 .menu-items {
@@ -105,7 +105,7 @@ header {
 
 .menu-items a {
     text-decoration: none;
-    color: #CAF0CD;
+    color: #9DAD7F;
 }
 
 @keyframes slide-in {
@@ -131,7 +131,7 @@ header {
     width: 800px;
     height: 800px;
     border-radius: 50%;
-    background-color: #000;
+    background-color: #557174;
     animation: circle-move .8s ease-in-out forwards;
 }
 
