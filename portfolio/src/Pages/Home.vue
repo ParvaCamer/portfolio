@@ -43,6 +43,7 @@ export default {
             position: relative;
             right: 80px;
             font-size: 3.5em;
+            margin-top: 0;
         }
 
         h2 {

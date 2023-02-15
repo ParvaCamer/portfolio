@@ -1,19 +1,39 @@
 <template>
     <div class="aboutme-container">
-        <button class="button"><span>Download my Resume</span></button>
-        <div class="aboutme-container-flex">
-            <h2>Who am I ?</h2>
-            <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer since
-                {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend developer
-                by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp for Fullstack
-                developer by M2iFormation. I am also a freelance since {{ displayYear(2021) }} years.
-            </p>
+        <div class="aboutme-container-whoami">
+            <button class="button"><span>Download my Resume</span></button>
+            <div class="aboutme-container-flex">
+                <h2>Who am I ?</h2>
+                <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer
+                    since
+                    {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
+                    developer
+                    by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp for Fullstack
+                    developer by M2iFormation. I am also a freelance since {{ displayYear(2021) }} years.
+                </p>
+            </div>
         </div>
+        <div class="aboutme-container-skills">
+            <div class="aboutme-container-skills-coding">
+                <svg viewBox="0 0 180 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#F2E7E2"
+                        d="M57.8,-57.4C69.3,-46.2,69.3,-23.1,68.1,-1.2C66.9,20.6,64.4,41.3,52.8,52.4C41.3,63.6,20.6,65.3,0.4,64.9C-19.9,64.5,-39.7,62,-53,50.9C-66.2,39.7,-72.8,19.9,-71,1.9C-69.1,-16.1,-58.8,-32.3,-45.5,-43.4C-32.3,-54.6,-16.1,-60.8,3.5,-64.2C23.1,-67.7,46.2,-68.5,57.8,-57.4Z"
+                        transform="translate(100 100)" />
+                </svg>
+                <img src="../assets/coding-guy-removebg.png" alt="coding-guy">
+            </div>
+            <DisplaySkills />
+        </div>
+
     </div>
 </template>
 
 <script>
+import DisplaySkills from '../components/AboutMe/DisplaySkills.vue';
 export default {
+    components: {
+        DisplaySkills
+    },
     methods: {
         displayYear(since) {
             let now = new Date();
@@ -30,69 +50,94 @@ export default {
 .aboutme-container {
     color: #F7F7E8;
     background-color: #557174;
-    display: flex;
-    justify-content: center;
-    position: relative;
 
-    .button {
-        position: absolute;
-        display: inline-block;
-        right: 150px;
-        height: 60px;
-        width: 200px;
-        border-radius: 6px;
-        background-color: #de6b1e;
-        border: none;
-        transition: all 0.5s;
-        cursor: pointer;
-        color: #F7F7E8;
-        font-size: .88em;
+    .aboutme-container-whoami {
+        display: flex;
+        justify-content: center;
+        position: relative;
 
-        span {
+        .button {
+            position: absolute;
             display: inline-block;
-            position: relative;
-            transition: 0.5s;
+            right: 150px;
+            height: 60px;
+            width: 200px;
+            border-radius: 6px;
+            background-color: #de6b1e;
+            border: none;
+            transition: all 0.5s;
+            cursor: pointer;
+            color: #F7F7E8;
+            font-size: .88em;
 
-            &:after {
-                content: '»';
-                position: absolute;
-                opacity: 0;
-                top: 0;
-                right: -20px;
+            span {
+                display: inline-block;
+                position: relative;
                 transition: 0.5s;
+
+                &:after {
+                    content: '»';
+                    position: absolute;
+                    opacity: 0;
+                    top: 0;
+                    right: -20px;
+                    transition: 0.5s;
+                }
+            }
+
+            &:hover span {
+                padding-right: 25px;
+
+                &:after {
+                    opacity: 1;
+                    right: 0;
+                }
             }
         }
 
-        &:hover span {
-            padding-right: 25px;
+        .aboutme-container-flex {
+            width: 80vw;
+            margin: 50px 0;
 
-            &:after {
-                opacity: 1;
-                right: 0;
+            h2 {
+                margin: 0;
+                padding: 5px;
+                text-align: center;
+                font-size: 2.3em;
+                width: 20vw;
+                border-radius: 6px;
+                box-shadow: inset 20px 20px 60px #c7cfb715,
+                    inset -20px -20px 60px #c7cfb720;
+            }
+
+            p {
+                text-align: justify;
+                padding: 0 100px;
+                font-size: 1.5em;
+                line-height: 6vh;
             }
         }
     }
 
-    .aboutme-container-flex {
-        width: 80vw;
-        margin: 50px 0;
+    .aboutme-container-skills {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
 
-        h2 {
-            margin: 0;
-            padding: 5px;
-            text-align: center;
-            font-size: 2.3em;
-            width: 20vw;
-            border-radius: 6px;
-            box-shadow: inset 20px 20px 60px #c7cfb715,
-                inset -20px -20px 60px #c7cfb720;
-        }
+        .aboutme-container-skills-coding {
+            position: relative;
+            width: 50%;
+            overflow: hidden;
 
-        p {
-            text-align: justify;
-            padding: 0 100px;
-            font-size: 1.5em;
-            line-height: 6vh;
+            img {
+                position: absolute;
+                left: 50%;
+                top: 80%;
+                transform: translate(-40%, -100%);
+                width: 60%;
+                -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0) 100%);
+                mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0) 100%);
+            }
         }
     }
 }
