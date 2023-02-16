@@ -13,14 +13,17 @@
         </svg>
     </div>
     <AboutMe />
+    <Projects />
 </template>
 
 <script>
 import AboutMe from './AboutMe.vue';
+import Projects from './Projects.vue';
 
 export default {
     components: {
-        AboutMe
+        AboutMe,
+        Projects
     }
 }
 </script>
@@ -64,6 +67,7 @@ export default {
         position: relative;
         width: 400px;
         top: -25px;
+        filter: drop-shadow(25px -10px 20px #4d4d4d);
     }
 
     svg {

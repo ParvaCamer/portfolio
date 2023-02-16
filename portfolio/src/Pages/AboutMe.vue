@@ -3,7 +3,7 @@
         <div class="aboutme-container-whoami">
             <button class="button"><span>Download my Resume</span></button>
             <div class="aboutme-container-flex">
-                <h2>Who am I ?</h2>
+                <base-h2 :title="'Who am I ?'" :newColor="'#F7F7E8'"></base-h2>
                 <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer
                     since
                     {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
@@ -12,6 +12,11 @@
                     developer by M2iFormation. I am also a freelance since {{ displayYear(2021) }} years.
                 </p>
             </div>
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#F2E7E2"
+                    d="M68.8,-28.8C74.8,-3.9,55.4,22.8,31.4,39.3C7.4,55.8,-21.2,62.2,-42,49.1C-62.9,36.1,-75.9,3.6,-67.6,-24.5C-59.3,-52.5,-29.7,-76.2,0.9,-76.4C31.4,-76.7,62.8,-53.7,68.8,-28.8Z"
+                    transform="translate(100 100)" />
+            </svg>
         </div>
         <div class="aboutme-container-skills">
             <div class="aboutme-container-skills-coding">
@@ -24,7 +29,6 @@
             </div>
             <DisplaySkills />
         </div>
-
     </div>
 </template>
 
@@ -68,7 +72,7 @@ export default {
             transition: all 0.5s;
             cursor: pointer;
             color: #F7F7E8;
-            font-size: .88em;
+            font-size: .95em;
 
             span {
                 display: inline-block;
@@ -98,17 +102,7 @@ export default {
         .aboutme-container-flex {
             width: 80vw;
             margin: 50px 0;
-
-            h2 {
-                margin: 0;
-                padding: 5px;
-                text-align: center;
-                font-size: 2.3em;
-                width: 20vw;
-                border-radius: 6px;
-                box-shadow: inset 20px 20px 60px #c7cfb715,
-                    inset -20px -20px 60px #c7cfb720;
-            }
+            z-index: 2;
 
             p {
                 text-align: justify;
@@ -117,17 +111,28 @@ export default {
                 line-height: 6vh;
             }
         }
+
+        svg {
+            position: absolute;
+            width: 600px;
+            opacity: .8;
+            left: -220px;
+            top: 200px;
+            transform: rotate(-180deg);
+        }
     }
 
     .aboutme-container-skills {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
+        overflow: hidden;
 
         .aboutme-container-skills-coding {
             position: relative;
-            width: 50%;
+            width: 60%;
             overflow: hidden;
+            margin: 0 0 -250px 0;
 
             img {
                 position: absolute;

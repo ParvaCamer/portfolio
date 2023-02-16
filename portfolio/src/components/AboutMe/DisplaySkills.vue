@@ -1,9 +1,9 @@
 <template>
     <div class="display-skills-container">
-        <div v-for="(skill, value) in skills" :key="skill.id">
+        <div class="display-skills-flex" v-for="(skill, value) in skills" :key="skill.id">
             <h2>{{ upperCase(value) }}</h2>
-            <div class="display-skills-flex">
-                <Skills v-for="program in skill" :key="program.id" :name="program.name" :url="program.url" />
+            <div class="display-skill-flex">
+                <Skills v-for="program in skill" :key="program.id" :name="program.name" />
             </div>
         </div>
     </div>
@@ -18,11 +18,10 @@ export default {
     data() {
         return {
             skills: {
-                languages: [
+                'languages': [
                     {
                         name: "HTML5",
                         type: "Languages",
-                        url: '../../assets/skills/HTML5.png'
                     },
                     {
                         name: "CSS3",
@@ -33,21 +32,9 @@ export default {
                         type: "Languages",
                     }
                 ],
-                frameworks: [
-                    /* {
-                        name: "Bootstrap",
-                        type: "Frameworks",
-                    }, */
+                'frameworks, platforms & libraries': [
                     {
-                        name: "jQuery",
-                        type: "Frameworks",
-                    },
-                    /* {
-                        name: "Less",
-                        type: "Frameworks",
-                    }, */
-                    {
-                        name: "NPM",
+                        name: "Vue.Js",
                         type: "Frameworks",
                     },
                     {
@@ -59,21 +46,33 @@ export default {
                         type: "Frameworks",
                     },
                     {
-                        name: "TailwindCSS",
+                        name: "Tailwind",
                         type: "Frameworks",
                     },
                     {
-                        name: "Vue.Js",
+                        name: "jQuery",
+                        type: "Frameworks",
+                    },
+                    {
+                        name: "Bootstrap",
+                        type: "Frameworks",
+                    },
+                    {
+                        name: "Less",
+                        type: "Frameworks",
+                    },
+                    {
+                        name: "NPM",
                         type: "Frameworks",
                     }
                 ],
-                databases: [
+                'databases': [
                     {
                         name: "MySQL",
                         type: "Databases",
                     }
                 ],
-                hosting: [
+                'hosting/SaaS': [
                     {
                         name: "Firebase",
                         type: "Hosting",
@@ -83,7 +82,7 @@ export default {
                         type: "Hosting",
                     }
                 ],
-                other: [
+                'other': [
                     /* {
                         name: "Figma",
                         type: "Other",
@@ -95,6 +94,10 @@ export default {
                     {
                         name: 'Vite',
                         type: 'Other',
+                    },
+                    {
+                        name: 'Wordpress',
+                        type: 'Other'
                     }
                 ]
             }
@@ -111,12 +114,14 @@ export default {
 <style scoped lang="scss">
 .display-skills-container {
     margin: 40px;
-    height: 600px;
-    width: 50%;
-    border: 1px solid black;
+    width: 40%;
 
-    .display-skills-flex {
+    .display-skill-flex {
         display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+        text-align: center;
     }
 }
 </style>
