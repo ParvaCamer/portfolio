@@ -3,7 +3,7 @@
         <div class="aboutme-container-whoami">
             <button class="button"><span>Download my Resume</span></button>
             <div class="aboutme-container-flex">
-                <base-h2 :title="'Who am I ?'" :newColor="'#F7F7E8'"></base-h2>
+                <base-h2 :title="'Who am I ?'" :newColor="'#e4edcf'"></base-h2>
                 <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer
                     since
                     {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
@@ -52,7 +52,7 @@ export default {
 
 <style scoped lang="scss">
 .aboutme-container {
-    color: #F7F7E8;
+    color: #e4edcf;
     background-color: #557174;
 
     .aboutme-container-whoami {
