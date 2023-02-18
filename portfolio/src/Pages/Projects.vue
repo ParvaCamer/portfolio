@@ -83,7 +83,7 @@ export default {
                         title: 'First Project Vue.Js',
                         languages: ['HTML', 'CSS', 'JavaScript', 'Vue.Js'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple turn-based game',
-                        url: 'https://parvacamer.github.io/FirstProjectUdemy-vuejs/',
+                        url: 'https://parvacamer.github.io/FirstProjectUdemy-Vue.Js/',
                         github: 'https://github.com/ParvaCamer/FirstProjectUdemy-Vue.Js'
                     },
                     {

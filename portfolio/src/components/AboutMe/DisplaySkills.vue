@@ -96,6 +96,14 @@ export default {
                         type: 'Other',
                     },
                     {
+                        name: 'Git',
+                        type: 'Other',
+                    },
+                    {
+                        name: 'Github',
+                        type: 'Other',
+                    },
+                    {
                         name: 'Wordpress',
                         type: 'Other'
                     }

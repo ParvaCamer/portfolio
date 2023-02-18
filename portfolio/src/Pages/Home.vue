@@ -73,7 +73,6 @@ export default {
     svg {
         position: absolute;
         bottom: -5px;
-        left: -20px;
     }
 }
 </style>
