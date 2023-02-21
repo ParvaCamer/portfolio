@@ -34,6 +34,7 @@ export default {
 <style scoped lang="scss">
 .container-display-projects {
     position: relative;
+    margin-left: 75px;
 
     .main-card {
         animation: slide-rotate-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -119,7 +120,6 @@ export default {
         animation: leave-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
         &.active {
-            margin-left: 70px;
             animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
 

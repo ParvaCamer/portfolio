@@ -34,7 +34,7 @@ export default {
                 ],
                 'frameworks, platforms & libraries': [
                     {
-                        name: "Vue.Js",
+                        name: "VueJs",
                         type: "Frameworks",
                     },
                     {
