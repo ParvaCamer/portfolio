@@ -73,6 +73,7 @@ export default {
             cursor: pointer;
             color: #F7F7E8;
             font-size: .95em;
+            z-index: 10;
 
             span {
                 display: inline-block;
