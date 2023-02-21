@@ -1,4 +1,5 @@
 <template>
+    <h1 id="progress">Website in progress</h1>
     <div class="home-container">
         <div class="home-container-flex">
             <h1>Hello there !</h1>
@@ -29,6 +30,13 @@ export default {
 </script>
 
 <style scoped lang="scss">
+#progress {
+    position: absolute;
+    left: 40%;
+    margin: 0;
+    color: rgb(196, 62, 62);
+}
+
 .home-container {
     color: #a8b78b;
     height: 100vh;
