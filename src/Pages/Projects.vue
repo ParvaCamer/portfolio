@@ -7,7 +7,11 @@
         </svg>
         <base-h2 class="h2" :title="'My projects'" :newColor="'#a8b78b'"></base-h2>
         <div class="display-projects" v-for="(project, value) in projects" :key="project.id">
-            <h2>{{ upperCase(value) }}</h2>
+            <div class="display-projects-h2">
+                <span></span>
+                <h2>{{ upperCase(value) }}</h2>
+                <span></span>
+            </div>
             <div class="display-projects-flex">
                 <DisplayProjects v-for="window in project" :key="window.id" :url="window.url" :title="window.title"
                     :description="window.description" :github="window.github" :languages="window.languages" />
@@ -53,15 +57,25 @@ export default {
     .display-projects {
         margin: 50px 100px;
 
-        h2 {
-            margin-bottom: 30px;
-            padding: 0 15px 10px;
-            color: #a8b78b;
-            text-align: left;
-            font-size: 1.6rem;
-            border-bottom: 1.5px solid #d1d18e;
-            width: 25%
+        .display-projects-h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            span {
+                border: 1px solid #d1d18e;
+                width: 250px;
+                height: 0;
+            }
+            h2 {
+                margin: 0;
+                padding: 0 20px;
+                color: #a8b78b;
+                text-align: left;
+                font-size: 1.7rem;
+            }
         }
+
 
         .display-projects-flex {
             display: flex;

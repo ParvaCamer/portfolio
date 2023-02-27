@@ -4,13 +4,6 @@ export default {
         return {
             projects: {
                 'freelance projects': [
-                    /* {
-                        title: 'Wedding Sharing',
-                        languages: ['Vue.Js', 'CSS', 'Firebase'],
-                        description: 'A website pictures sharing about wedding ceremonies',
-                        url: '',
-                        github: ''
-                    } */
                     {
                         title: 'Fire Station Open Day',
                         languages: ['Vue.Js', 'Vue Router', 'ApiRestful', 'Firebase', 'CSS'],
@@ -28,6 +21,13 @@ export default {
                 ],
                 'individual projects': [
                     {
+                        title: 'Wedding Sharing',
+                        languages: ['Vue.Js', 'VueRouter', 'CSS', 'Firebase', 'ApiRestful', 'Vite', 'Encrypted data'],
+                        description: "A website for storing and downloading images. Specialized in wedding theme. Admin can create space, add, delete or edit the images. Each space is protected. The administrator can give the rights to visitors to also add photos, or restrict them to downloading only. We were two for this project: <a href='https://github.com/KonisDesign'>Julien Devos</a> who took care of the design and CSS, and myself who follows me busy with the rest. If you have a problem with downloading, it's the CORS Policy that prevents you from doing so. I don't have a solution at the moment.",
+                        url: 'https://wedding-sharing.netlify.app/',
+                        github: 'https://github.com/ParvaCamer/wedding-sharing'
+                    },
+                    {
                         title: 'Weather Application',
                         languages: ['Vue.Js', 'ApiRestful', 'SASS'],
                         description: 'A simple weather application, with geolocation and data recovery system. We get information for the day in real time, as well as for the next 6 days. The city can be changed to access to new informations.',
@@ -40,8 +40,15 @@ export default {
                         description: 'A project to generate a random password',
                         url: 'https://parvacamer.github.io/password-generator/',
                         github: 'https://github.com/ParvaCamer/password-generator'
-                    }
-                    , {
+                    },
+                    {
+                        title: 'Hanged-Man Game',
+                        languages: ['HTML', 'CSS', 'LESS', 'JavaScript'],
+                        description: 'A hangman game with random generation of words',
+                        url: 'https://parvacamer.github.io/hanged-man/',
+                        github: 'https://github.com/ParvaCamer/hanged-man'
+                    },
+                    {
                         title: 'Tic-Tac-Toe',
                         languages: ['HTML', 'SCSS', 'JavaScript'],
                         description: 'A tic-tac-toe game. We can play a game against a friend, or against computer.',
@@ -51,9 +58,16 @@ export default {
                     {
                         title: 'Word Counter',
                         languages: ['HTML', 'SCSS', 'JavaScript'],
-                        description: 'A simple word and letter counter. I wanted to create it to use regex.',
+                        description: 'A simple word and letter counter. I wanted to create it to use regex. Voice recognition has been added.',
                         url: 'https://parvacamer.github.io/word-counter/',
                         github: 'https://github.com/ParvaCamer/word-counter'
+                    },
+                    {
+                        title: 'Calculator',
+                        languages: ['HTML', 'SCSS', 'JavaScript'],
+                        description: 'A simple application to use a calculator.',
+                        url: 'https://parvacamer.github.io/calculator/',
+                        github: 'https://github.com/ParvaCamer/calculator'
                     }
                 ],
                 'learning projects': [
