@@ -1,16 +1,19 @@
 <template>
   <Header />
   <Home />
+  <Footer />
 </template>
 
 <script>
 import Header from './components/Layouts/Header.vue';
 import Home from './Pages/Home.vue';
+import Footer from './components/Layouts/Footer.vue';
 
 export default {
   components: {
     Header,
-    Home
+    Home,
+    Footer
   }
 }
 </script>

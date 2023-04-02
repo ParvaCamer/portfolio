@@ -13,7 +13,7 @@
                 <span></span>
             </div>
             <div class="display-projects-flex">
-                <DisplayProjects v-for="window in project" :key="window.id" :url="window.url" :title="window.title"
+                <DisplayProjects v-for="window in project" :key="window.id" :index="window.id" :url="window.url" :title="window.title"
                     :description="window.description" :github="window.github" :languages="window.languages" />
             </div>
         </div>
@@ -76,14 +76,11 @@ export default {
             }
         }
 
-
         .display-projects-flex {
             display: flex;
-            width: 100%;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 40px 25px;
         }
     }
-
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="container-display-projects" :class="{ active: display }">
+    <div class="container-display-projects">
         <MainCard class="main-card" :class="{ active: display }" @emit-again="emitAgain" :url="url" :title="title"
             :languages="languages" :github="github" />
         <ShowMore class="show-more" :class="{ active: display }" @emit-again="emitAgain" v-if="display" :url="url"
@@ -11,7 +11,7 @@
 import MainCard from './DisplayInfos/MainCard.vue';
 import ShowMore from './DisplayInfos/ShowMore.vue';
 export default {
-    props: ['url', 'title', 'description', 'github', 'languages'],
+    props: ['index', 'url', 'title', 'description', 'github', 'languages'],
     components: {
         MainCard,
         ShowMore
@@ -34,110 +34,9 @@ export default {
 <style scoped lang="scss">
 .container-display-projects {
     position: relative;
-    margin-left: 75px;
+    flex: 1 1 calc(30% - 10px);
 
-    .main-card {
-        animation: slide-rotate-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        -webkit-animation: slide-rotate-ver-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    .main-card {}
 
-        &.active {
-            left: -71px;
-            position: absolute;
-            -webkit-animation: slide-rotate-ver-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-            animation: slide-rotate-ver-left .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
-
-        @-webkit-keyframes slide-rotate-ver-left {
-            0% {
-                -webkit-transform: translateX(0) rotateY(0);
-                transform: translateX(0) rotateY(0);
-            }
-
-            50% {
-                filter: blur(.4rem);
-            }
-
-            100% {
-                -webkit-transform: translateX(-150px) rotateY(80deg);
-                transform: translateX(-150px) rotateY(80deg);
-                filter: blur(.8rem);
-            }
-        }
-
-        @keyframes slide-rotate-ver-left {
-            0% {
-                -webkit-transform: translateX(0) rotateY(0);
-                transform: translateX(0) rotateY(0);
-            }
-
-            50% {
-                filter: blur(.4rem);
-            }
-
-            100% {
-                -webkit-transform: translateX(-150px) rotateY(80deg);
-                transform: translateX(-150px) rotateY(80deg);
-                filter: blur(.8rem);
-            }
-        }
-
-        @keyframes slide-rotate-ver-right {
-            0% {
-                -webkit-transform: translateX(-150px) rotateY(80deg);
-                transform: translateX(-150px) rotateY(80deg);
-                filter: blur(.8rem);
-            }
-
-            50% {
-                filter: blur(.4rem);
-            }
-
-            100% {
-                -webkit-transform: translateX(0) rotateY(0);
-                transform: translateX(0) rotateY(0);
-            }
-        }
-
-        @-webkit-keyframes slide-rotate-ver-right {
-            0% {
-                -webkit-transform: translateX(-150px) rotateY(80deg);
-                transform: translateX(-150px) rotateY(80deg);
-                filter: blur(.8rem);
-            }
-
-            50% {
-                filter: blur(.4rem);
-            }
-
-            100% {
-                -webkit-transform: translateX(0) rotateY(0);
-                transform: translateX(0) rotateY(0);
-            }
-        }
-    }
-
-    .show-more {
-        animation: leave-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-
-        &.active {
-            animation: slide-right .5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        }
-
-        @keyframes slide-right {
-            0% {
-                left: -200px;
-                opacity: 0;
-            }
-
-            75% {
-                opacity: 0.2;
-            }
-
-            100% {
-                opacity: 1;
-                left: 0;
-            }
-        }
-    }
-}
-</style>
+    .show-more {}
+}</style>

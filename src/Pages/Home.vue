@@ -74,7 +74,7 @@ export default {
     img {
         position: relative;
         width: 400px;
-        top: -25px;
+        top: 20px;
         filter: drop-shadow(25px -10px 20px #4d4d4d);
     }
 

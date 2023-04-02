@@ -1,15 +1,17 @@
 <template>
     <div class="aboutme-container">
         <div class="aboutme-container-whoami">
-            <button class="button"><span>Download my Resume</span></button>
+            <a href="" download>
+                <button class="button"><span>Download my Resume</span></button>
+            </a>
             <div class="aboutme-container-flex">
                 <base-h2 :title="'Who am I ?'" :newColor="'#e4edcf'"></base-h2>
                 <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer
                     since
                     {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
                     developer
-                    by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp for Fullstack
-                    developer by M2iFormation. I am also a freelance since {{ displayYear(2021) }} years.
+                    by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp to be Fullstack
+                    developer by M2iFormation. I am also a freelance since September 2021.
                 </p>
             </div>
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
@@ -60,42 +62,52 @@ export default {
         justify-content: center;
         position: relative;
 
-        .button {
-            position: absolute;
-            display: inline-block;
-            right: 150px;
+
+        a, .button {
             height: 60px;
             width: 200px;
             border-radius: 6px;
-            background-color: #de6b1e;
-            border: none;
-            transition: all 0.5s;
-            cursor: pointer;
-            color: #F7F7E8;
-            font-size: .95em;
-            z-index: 10;
+            z-index: 5;
+        }
 
-            span {
+        a {
+            position: absolute;
+            right: 150px;
+
+            .button {
                 display: inline-block;
-                position: relative;
-                transition: 0.5s;
+                height: 60px;
+                width: 200px;
+                border-radius: 6px;
+                background-color: #de6b1e;
+                border: none;
+                transition: all 0.5s;
+                cursor: pointer;
+                color: #f7f7e8;
+                font-size: 0.95em;
 
-                &:after {
-                    content: '»';
-                    position: absolute;
-                    opacity: 0;
-                    top: 0;
-                    right: -20px;
+                span {
+                    display: inline-block;
+                    position: relative;
                     transition: 0.5s;
+
+                    &:after {
+                        content: '»';
+                        position: absolute;
+                        opacity: 0;
+                        top: 0;
+                        right: -20px;
+                        transition: 0.5s;
+                    }
                 }
-            }
 
-            &:hover span {
-                padding-right: 25px;
+                &:hover span {
+                    padding-right: 25px;
 
-                &:after {
-                    opacity: 1;
-                    right: 0;
+                    &:after {
+                        opacity: 1;
+                        right: 0;
+                    }
                 }
             }
         }
