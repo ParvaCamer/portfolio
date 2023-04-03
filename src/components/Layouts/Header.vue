@@ -7,10 +7,10 @@
                 <span :class="{ active: isMenuOpen }"></span>
             </div>
             <ul class="menu-items" :class="{ active: isMenuOpen }">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Me</a></li>
-                <li><a href="#">My Projects</a></li>
-                <li><a href="#">My Resume</a></li>
+                <li><a @click="scrollTo('.home-container')">Home</a></li>
+                <li><a @click="scrollTo('.aboutme-container')">About Me</a></li>
+                <li><a @click="scrollTo('.projects-container')">My Projects</a></li>
+                <!-- <li><a @click="scrollTo('contactme')">Contact me</a></li> -->
             </ul>
         </nav>
         <div v-if="isMenuOpen" class="burger-circle"></div>
@@ -27,123 +27,128 @@ export default {
     methods: {
         toggleMenu() {
             this.isMenuOpen = !this.isMenuOpen;
+        },
+        scrollTo(id) {
+            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
         }
     }
 }
 </script>
 
-<style>
+<style lang="scss">
 header {
     position: fixed;
     top: 30px;
     right: 50px;
-    z-index: 5;
+    z-index: 3;
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-}
 
-.menu-burger {
-    display: flex;
-    align-items: center;
-}
+    .menu-burger {
+        display: flex;
+        align-items: center;
 
-.menu-icon {
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 30px;
-    height: 20px;
-    z-index: 2;
-}
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 30px;
+            height: 20px;
+            z-index: 3;
 
-.menu-icon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    background-color: #557174;
-    transition: transform 0.2s;
-}
+            span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #A8B78B;
+                transition: transform 0.2s;
 
-.menu-icon span:nth-child(2) {
-    width: 85%;
-}
+                &:nth-child(2) {
+                    width: 85%;
+                }
 
-.menu-icon span:nth-child(3) {
-    width: 70%;
-}
+                &:nth-child(3) {
+                    width: 70%;
+                }
 
-.menu-icon span.active {
-    transition: background-color .9s;
-    background-color: #F7F7E8;
-}
+                &.active {
+                    transition: background-color .9s;
+                    background-color: #F7F7E8;
+                }
+            }
+        }
 
-.menu-items {
-    padding: 0;
-    position: absolute;
-    top: 80px;
-    right: 125px;
-    display: none;
-    list-style-type: none;
-    z-index: 2;
-}
+        .menu-items {
+            padding: 0;
+            position: absolute;
+            top: 80px;
+            right: 125px;
+            display: none;
+            list-style-type: none;
+            z-index: 3;
 
-.menu-items.active {
-    display: flex;
-    flex-direction: column;
-    animation: slide-in .9s forwards;
-}
+            &.active {
+                display: flex;
+                flex-direction: column;
+                animation: slide-in .9s forwards;
+            }
 
-.menu-items li {
-    padding: 10px 0;
-    font-size: 1.4em;
-}
+            li {
+                padding: 10px 0;
+                font-size: 1.4em;
+            }
 
-.menu-items a {
-    text-decoration: none;
-    color: #9DAD7F;
-}
-
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        transform: translateY(-100%);
+            a {
+                text-decoration: none;
+                color: #F7F7E8;
+                cursor: pointer;
+            }
+        }
     }
 
-    80% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.burger-circle {
-    position: absolute;
-    top: -300px;
-    right: -300px;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    background-color: #557174;
-    animation: circle-move .8s ease-in-out forwards;
-}
-
-@keyframes circle-move {
-    0% {
-        top: -1000px;
-        right: -1000px;
-    }
-
-    100% {
+    .burger-circle {
+        z-index: 2;
+        position: absolute;
         top: -300px;
         right: -300px;
+        width: 800px;
+        height: 800px;
+        border-radius: 50%;
+        background-color: #A8B78B;
+        animation: circle-move .8s ease-in-out forwards;
+    }
+
+    @keyframes circle-move {
+        0% {
+            top: -1000px;
+            right: -1000px;
+        }
+
+        100% {
+            top: -300px;
+            right: -300px;
+        }
+    }
+
+    @keyframes slide-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+
+        80% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 }
 </style>

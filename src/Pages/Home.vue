@@ -15,6 +15,7 @@
     </div>
     <AboutMe />
     <Projects />
+    
 </template>
 
 <script>

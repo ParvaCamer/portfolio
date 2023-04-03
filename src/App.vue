@@ -1,6 +1,6 @@
 <template>
-  <Header />
-  <Home />
+  <Header @send-id="getId"/>
+  <Home /> 
   <Footer />
 </template>
 
@@ -14,6 +14,11 @@ export default {
     Header,
     Home,
     Footer
+  },
+  data() {
+    return {
+      selectedId : null
+    }
   }
 }
 </script>

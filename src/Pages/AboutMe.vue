@@ -63,11 +63,12 @@ export default {
         position: relative;
 
 
-        a, .button {
+        a,
+        .button {
             height: 60px;
             width: 200px;
             border-radius: 6px;
-            z-index: 5;
+            z-index: 1;
         }
 
         a {
@@ -116,12 +117,16 @@ export default {
             width: 80vw;
             margin: 50px 0;
             z-index: 2;
-
             p {
+                margin-left: 125px;
                 text-align: justify;
-                padding: 0 100px;
+                padding: 25px 50px;
                 font-size: 1.5em;
-                line-height: 6vh;
+                border-radius: 10px;
+                width: 45%;
+                line-height: 5vh;
+                background-color: rgba(242, 231, 226, 0.301);
+               
             }
         }
 
