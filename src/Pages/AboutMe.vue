@@ -1,7 +1,7 @@
 <template>
     <div class="aboutme-container">
         <div class="aboutme-container-whoami">
-            <a href="" download>
+            <a href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf" download>
                 <button class="button"><span>Download my Resume</span></button>
             </a>
             <div class="aboutme-container-flex">
