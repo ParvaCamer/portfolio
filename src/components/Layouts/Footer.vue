@@ -1,8 +1,26 @@
 <template>
     <footer>
-        <div class="clip-path"></div>
         <div class="footer">
             <div class="row flex">
+                <a>
+                    <svg width="64px" height="64px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title></title>
+                            <g id="Complete">
+                                <g id="mail">
+                                    <g>
+                                        <polyline fill="none" points="4 8.2 12 14.1 20 8.2" stroke="#000000"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polyline>
+                                        <rect fill="none" height="14" rx="2" ry="2" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" width="18" x="3" y="6.5"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
                 <a href="https://www.linkedin.com/in/romain-camerlynck-b974a6177/" target="_blank">
                     <svg fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-143 145 512 512" xml:space="preserve"
@@ -48,20 +66,24 @@
                     </svg>
                 </a>
             </div>
-
             <div class="row">
                 <ul>
-                <li><a @click="scrollTo('.home-container')">Home</a></li>
-                <li><a @click="scrollTo('.aboutme-container')">About Me</a></li>
-                <li><a @click="scrollTo('.projects-container')">My Projects</a></li>
-                <!-- <li><a @click="scrollTo('contactme')">Contact me</a></li> -->
+                    <li><a @click="scrollTo('.home-container')">Home</a></li>
+                    <li><a @click="scrollTo('.aboutme-container')">About Me</a></li>
+                    <li><a @click="scrollTo('.projects-container')">My Projects</a></li>
+                    <!-- <li><a @click="scrollTo('contactme')">Contact me</a></li> -->
                 </ul>
             </div>
-
             <div class="row">
                 Designed By : Camerlynck Romain - {{ getFullYear }}
             </div>
         </div>
+        <svg class="svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#F7F7E7" fill-opacity="1"
+                d="M0,192L120,176C240,160,480,128,720,122.7C960,117,1200,139,1320,149.3L1440,160L1440,0L1320,0C1200,0,960,0,720,0C480,0,240,0,120,0L0,0Z">
+            </path>
+
+        </svg>
     </footer>
 </template>
 
@@ -75,7 +97,7 @@ export default {
     },
     method: {
         scrollTo(id) {
-            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
         }
     }
 }
@@ -85,27 +107,22 @@ export default {
 footer {
     position: relative;
 
-    .clip-path {
+    .svg-top {
         position: absolute;
         top: -50px;
-        clip-path: polygon(0 0, 100% 0, 100% 43%, 0 55%);
-        height: 400px;
-        width: 100%;
-        background: #557174;
     }
 
     .footer {
-        background: #F7F7E8;
+        background: #557174;
         padding: 30px 0px;
         font-family: 'Play', sans-serif;
         text-align: center;
-        clip-path: polygon(0 40%, 100% 13%, 100% 100%, 0% 100%);
 
         .row {
             width: 100%;
             margin: 1% 0%;
             padding: 0.6% 0%;
-            color: #a8b78b;
+            color: #E4EDCF;
             font-size: 0.8em;
 
             &.flex {
@@ -113,17 +130,17 @@ footer {
                 justify-content: center;
                 align-items: center;
                 gap: 30px;
-                margin-top: 80px;
+                margin-top: 120px;
             }
 
             a {
                 text-decoration: none;
-                color: #a8b78b;
                 transition: 0.5s;
                 cursor: pointer;
+                z-index: 1;
 
                 &:hover {
-                    color: #557174;
+                    color: #a8b78b;
                 }
 
                 img {
@@ -136,8 +153,11 @@ footer {
                 padding: 0;
 
                 li {
+                    width: 100px;
                     display: inline-block;
                     margin: 0px 30px;
+                    z-index: 1;
+                    position: relative;
                 }
             }
         }
@@ -159,4 +179,5 @@ footer {
     .footer .row a i {
         margin: 0% 3%;
     }
-}</style>
+}
+</style>

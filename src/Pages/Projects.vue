@@ -13,8 +13,9 @@
                 <span></span>
             </div>
             <div class="display-projects-flex">
-                <DisplayProjects v-for="window in project" :key="window.id" :index="window.id" :url="window.url" :title="window.title"
-                    :description="window.description" :github="window.github" :languages="window.languages" />
+                <DisplayProjects v-for="window in project" :key="window.id" :index="window.id" :url="window.url"
+                    :title="window.title" :description="window.description" :github="window.github"
+                    :languages="window.languages" />
             </div>
         </div>
     </div>
@@ -46,7 +47,7 @@ export default {
 
     svg {
         position: absolute;
-        top: -2px;
+        top: -2px; 
     }
 
     .h2 {
@@ -62,11 +63,13 @@ export default {
             align-items: center;
             justify-content: center;
             margin-bottom: 40px;
+
             span {
                 border: 1px solid #d1d18e;
                 width: 250px;
                 height: 0;
             }
+
             h2 {
                 margin: 0;
                 padding: 0 20px;
@@ -82,5 +85,4 @@ export default {
             gap: 40px 25px;
         }
     }
-}
-</style>
+}</style>

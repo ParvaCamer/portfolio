@@ -29,7 +29,7 @@ export default {
             this.isMenuOpen = !this.isMenuOpen;
         },
         scrollTo(id) {
-            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+            document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
         }
     }
 }
@@ -46,6 +46,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transition: all 0.2s;
 
     .menu-burger {
         display: flex;
@@ -61,12 +62,22 @@ header {
             height: 20px;
             z-index: 3;
 
+            &:hover {
+                span {
+                    width: 70%;
+
+                    &:nth-child(3) {
+                        width: 100%;
+                    }
+                }
+            }
+
             span {
                 display: block;
                 width: 100%;
                 height: 3px;
                 background-color: #A8B78B;
-                transition: transform 0.2s;
+                transition: width 0.2s;
 
                 &:nth-child(2) {
                     width: 85%;
@@ -77,7 +88,7 @@ header {
                 }
 
                 &.active {
-                    transition: background-color .9s;
+                    transition: background-color .9s, width .2s;
                     background-color: #F7F7E8;
                 }
             }
