@@ -10,15 +10,21 @@
                 <li><a @click="scrollTo('.home-container')">Home</a></li>
                 <li><a @click="scrollTo('.aboutme-container')">About Me</a></li>
                 <li><a @click="scrollTo('.projects-container')">My Projects</a></li>
-                <!-- <li><a @click="scrollTo('contactme')">Contact me</a></li> -->
+                <li><a @click="scrollTo('.footer')">Reach me</a></li>
             </ul>
         </nav>
-        <div v-if="isMenuOpen" class="burger-circle"></div>
+        <div class="burger-circle" :class="{ show: isMenuOpen }"></div>
     </header>
 </template>
 
 <script>
 export default {
+    props: {
+        menuIsOpen: {
+            type: Boolean,
+            required: true
+        }
+    },
     data() {
         return {
             isMenuOpen: false,
@@ -26,10 +32,21 @@ export default {
     },
     methods: {
         toggleMenu() {
+            document.querySelector('.a-button').style.zIndex = "1";
             this.isMenuOpen = !this.isMenuOpen;
+            this.$emit('menu-is-open', this.isMenuOpen);
         },
         scrollTo(id) {
             document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        },
+    },
+    watch: {
+        menuIsOpen(newValue) {
+            this.isMenuOpen = newValue;
+            if (!newValue) 
+                setTimeout(() => {
+                    document.querySelector('.a-button').style.zIndex = "3"
+                }, 300);;
         }
     }
 }
@@ -106,7 +123,7 @@ header {
             &.active {
                 display: flex;
                 flex-direction: column;
-                animation: slide-in .9s forwards;
+                animation: slide-in .6s forwards;
             }
 
             li {
@@ -118,6 +135,11 @@ header {
                 text-decoration: none;
                 color: #F7F7E8;
                 cursor: pointer;
+                transition: color .5s;
+
+                &:hover {
+                    color: #557174;
+                }
             }
         }
     }
@@ -131,18 +153,13 @@ header {
         height: 800px;
         border-radius: 50%;
         background-color: #A8B78B;
-        animation: circle-move .8s ease-in-out forwards;
-    }
+        opacity: 0;
+        transform: translateX(100%) translateY(-100%);
+        transition: opacity 0.7s ease-out, transform 0.4s ease-out;
 
-    @keyframes circle-move {
-        0% {
-            top: -1000px;
-            right: -1000px;
-        }
-
-        100% {
-            top: -300px;
-            right: -300px;
+        &.show {
+            opacity: 1;
+            transform: scale(1);
         }
     }
 

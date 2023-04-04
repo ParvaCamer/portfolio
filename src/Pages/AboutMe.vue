@@ -1,7 +1,7 @@
 <template>
     <div class="aboutme-container">
         <div class="aboutme-container-whoami">
-            <a href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf" download>
+            <a class="a-button" href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf" download>
                 <button class="button"><span>Download my Resume</span></button>
             </a>
             <div class="aboutme-container-flex">
@@ -63,12 +63,13 @@ export default {
         position: relative;
 
 
-        a,
+        .a-button,
         .button {
             height: 60px;
             width: 200px;
             border-radius: 6px;
-            z-index: 1;
+            z-index: 3;
+            animation: bounce 2s infinite;
         }
 
         a {
@@ -110,6 +111,12 @@ export default {
                         right: 0;
                     }
                 }
+            }
+
+            @keyframes bounce {
+	            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	            40% {transform: translateY(-5px);}
+	            60% {transform: translateY(-2.5px);}
             }
         }
 

@@ -1,6 +1,6 @@
 <template>
-  <Header @send-id="getId"/>
-  <Home /> 
+  <Header @menu-is-open="menuOpen" :menuIsOpen="isMenuOpen" />
+  <Home :isMenuOpen="isMenuOpen" @is-menu-open="menuOpen" />
   <Footer />
 </template>
 
@@ -17,7 +17,12 @@ export default {
   },
   data() {
     return {
-      selectedId : null
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    menuOpen(value) {
+      this.isMenuOpen = value;
     }
   }
 }

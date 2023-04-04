@@ -52,11 +52,11 @@ export default {
 
     .h2 {
         display: inline-block;
-        margin: 300px 0 50px 150px;
+        margin: 300px 0 10px 150px;
     }
 
     .display-projects {
-        margin: 50px 100px;
+        margin: 75px 100px 50px;
 
         .display-projects-h2 {
             display: flex;
