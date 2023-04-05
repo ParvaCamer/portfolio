@@ -1,20 +1,30 @@
 <template>
     <div class="aboutme-container">
         <div class="aboutme-container-whoami">
-            <a class="a-button" href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf" download>
+            <a class="a-button" href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf"
+                download>
                 <button class="button"><span>Download my Resume</span></button>
             </a>
             <div class="aboutme-container-flex">
                 <base-h2 :title="'Who am I ?'" :newColor="'#e4edcf'"></base-h2>
-                <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack developer
-                    since
-                    {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
-                    developer
-                    by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp to be Fullstack
-                    developer by M2iFormation. I am also a freelance since September 2021.
-                </p>
+                <div class="aboutme-container-text">
+                    <svg class="svg-text" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F2E7E2"
+                            d="M64,-45.4C79.6,-31.6,86.4,-5.2,79.8,15.9C73.1,37,53,52.6,33.8,56.8C14.5,60.9,-3.9,53.6,-25.4,45.8C-47,38.1,-71.8,30.1,-80.5,12.5C-89.2,-5.2,-82,-32.4,-65.9,-46.2C-49.8,-60.1,-24.9,-60.7,-0.3,-60.5C24.3,-60.2,48.5,-59.1,64,-45.4Z"
+                            transform="translate(100 100)" />
+                    </svg>
+                    <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack
+                        developer
+                        since
+                        {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
+                        developer
+                        by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp to be
+                        Fullstack
+                        developer by M2iFormation. I am also a freelance since September 2021.
+                    </p>
+                </div>
             </div>
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <svg class="svg-container" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#F2E7E2"
                     d="M68.8,-28.8C74.8,-3.9,55.4,22.8,31.4,39.3C7.4,55.8,-21.2,62.2,-42,49.1C-62.9,36.1,-75.9,3.6,-67.6,-24.5C-59.3,-52.5,-29.7,-76.2,0.9,-76.4C31.4,-76.7,62.8,-53.7,68.8,-28.8Z"
                     transform="translate(100 100)" />
@@ -114,9 +124,22 @@ export default {
             }
 
             @keyframes bounce {
-	            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-	            40% {transform: translateY(-5px);}
-	            60% {transform: translateY(-2.5px);}
+
+                0%,
+                20%,
+                50%,
+                80%,
+                100% {
+                    transform: translateY(0);
+                }
+
+                40% {
+                    transform: translateY(-5px);
+                }
+
+                60% {
+                    transform: translateY(-2.5px);
+                }
             }
         }
 
@@ -124,20 +147,34 @@ export default {
             width: 80vw;
             margin: 50px 0;
             z-index: 2;
-            p {
-                margin-left: 125px;
-                text-align: justify;
-                padding: 25px 50px;
-                font-size: 1.5em;
-                border-radius: 10px;
-                width: 45%;
-                line-height: 5vh;
-                background-color: rgba(242, 231, 226, 0.301);
-               
+
+            .aboutme-container-text {
+                position: relative;
+                height: 50vh;
+
+                .svg-text {
+                    position: relative;
+                    transform: translateX(250px) translateY(-150px) rotate(3deg);
+                    width: 900px;
+                    
+                }
+                p {
+                    position: absolute;
+                    top: 70px;
+                    left: 350px;
+                    width: 600px;
+                    color: #a8b78b;
+                    text-align: justify;
+                    padding: 25px 50px;
+                    font-size: 1.35em;
+                    line-height: 5vh;
+                }
             }
+
+
         }
 
-        svg {
+        .svg-container {
             position: absolute;
             width: 600px;
             opacity: .8;
