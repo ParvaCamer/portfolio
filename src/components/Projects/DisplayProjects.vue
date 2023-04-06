@@ -1,9 +1,9 @@
 <template>
     <div class="container-display-projects">
-        <MainCard class="main-card" :class="{ active: display }" @emit-again="emitAgain" :url="url" :title="title"
-            :languages="languages" :github="github" />
-        <ShowMore class="show-more" :class="{ active: display }" @emit-again="emitAgain" v-if="display" :url="url"
-            :title="title" :description="description" :github="github" />
+        <MainCard class="main-card" :class="{ active: display }" v-if="!display" @emit-show="emitShow" :url="url"
+            :title="title" :languages="languages" :github="github" />
+        <ShowMore class="show-more" :class="{ active: display }" v-else :url="url" :title="title" :description="description"
+            :github="github" />
     </div>
 </template>
 
@@ -24,8 +24,9 @@ export default {
         }
     },
     methods: {
-        emitAgain() {
-            this.display = !this.display
+        emitShow(value) {
+            console.log(value)
+            this.display = value;
         }
     }
 }
@@ -35,8 +36,5 @@ export default {
 .container-display-projects {
     position: relative;
     flex: 1 1 calc(30% - 10px);
-
-    .main-card {}
-
-    .show-more {}
-}</style>
+}
+</style>

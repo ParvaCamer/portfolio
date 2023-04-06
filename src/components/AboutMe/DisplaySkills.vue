@@ -38,6 +38,22 @@ export default {
                         type: "Frameworks",
                     },
                     {
+                        name: "React",
+                        type: "Frameworks"
+                    },
+                    {
+                        name: "NodeJs",
+                        type: "Frameworks"
+                    },
+                    {
+                        name: "Express",
+                        type: "Frameworks"
+                    },
+                    {
+                        name: "Pinia",
+                        type: "Frameworks"
+                    },
+                    {
                         name: "Nuxt",
                         type: "Frameworks",
                     },
@@ -70,6 +86,10 @@ export default {
                     {
                         name: "MySQL",
                         type: "Databases",
+                    },
+                    {
+                        name: "MongoDB",
+                        type: "Databases"
                     }
                 ],
                 'hosting/SaaS': [
@@ -83,24 +103,24 @@ export default {
                     }
                 ],
                 'other': [
-                    /* {
-                        name: "Figma",
-                        type: "Other",
-                    }, */
                     {
-                        name: "ESLint",
+                        name: "Vite",
                         type: "Other",
                     },
                     {
-                        name: 'Vite',
-                        type: 'Other',
+                        name: "Github",
+                        type: "Other",
                     },
                     {
                         name: 'Git',
                         type: 'Other',
                     },
                     {
-                        name: 'Github',
+                        name: 'ESLint',
+                        type: 'Other',
+                    },
+                    {
+                        name: 'Docker',
                         type: 'Other',
                     },
                     {

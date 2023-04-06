@@ -1,13 +1,8 @@
 <template>
-    <component-projects @emit-display="emitDisplay" :url="url" :title="title" :github="github">
-        <template v-slot:title>What is it about ?</template>
-        <template v-slot:infos>
-            <div class="description-div">
-                <p>{{ description }}</p>
-            </div>
-        </template>
-        <template v-slot:button>Go Back</template>
-    </component-projects>
+    <h3>What is it about ?</h3>
+    <div class="description-div">
+        <p>{{ description }}</p>
+    </div>
 </template>
 
 <script>

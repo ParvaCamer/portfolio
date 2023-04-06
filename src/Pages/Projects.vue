@@ -56,7 +56,7 @@ export default {
     }
 
     .display-projects {
-        margin: 75px 100px 50px;
+        margin: 35px 100px 50px;
 
         .display-projects-h2 {
             display: flex;
@@ -83,6 +83,7 @@ export default {
             display: flex;
             flex-wrap: wrap;
             gap: 40px 25px;
+            padding-bottom: 45px;
         }
     }
 }</style>

@@ -1,6 +1,11 @@
 <template>
     <div class="aboutme-container">
         <div class="aboutme-container-whoami">
+            <svg class="svg-top" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#F2E7E2"
+                    d="M42,-72.8C55.9,-64.6,69.8,-56.5,76.8,-44.3C83.8,-32.2,83.9,-16.1,81,-1.7C78.2,12.8,72.3,25.6,65,37.2C57.8,48.9,49.1,59.4,38,67.9C26.9,76.3,13.5,82.8,-1.5,85.4C-16.5,88,-32.9,86.8,-46.8,79.9C-60.6,73,-71.8,60.5,-76.6,46.2C-81.3,31.9,-79.6,16,-77.2,1.4C-74.8,-13.2,-71.5,-26.3,-66.4,-39.9C-61.3,-53.5,-54.2,-67.6,-42.8,-77.2C-31.4,-86.8,-15.7,-92,-0.9,-90.5C14,-89,28,-80.9,42,-72.8Z"
+                    transform="translate(100 100)" />
+            </svg>
             <a class="a-button" href="https://github.com/ParvaCamer/portfolio/raw/main/src/assets/Resume_Fullstack.pdf"
                 download>
                 <button class="button"><span>Download my Resume</span></button>
@@ -9,7 +14,7 @@
                 <base-h2 :title="'Who am I ?'" :newColor="'#e4edcf'"></base-h2>
                 <div class="aboutme-container-text">
                     <svg class="svg-text" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <path fill="#F2E7E2"
+                        <path class="path-svg-text" fill="#F2E7E2"
                             d="M64,-45.4C79.6,-31.6,86.4,-5.2,79.8,15.9C73.1,37,53,52.6,33.8,56.8C14.5,60.9,-3.9,53.6,-25.4,45.8C-47,38.1,-71.8,30.1,-80.5,12.5C-89.2,-5.2,-82,-32.4,-65.9,-46.2C-49.8,-60.1,-24.9,-60.7,-0.3,-60.5C24.3,-60.2,48.5,-59.1,64,-45.4Z"
                             transform="translate(100 100)" />
                     </svg>
@@ -27,6 +32,11 @@
             <svg class="svg-container" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#F2E7E2"
                     d="M68.8,-28.8C74.8,-3.9,55.4,22.8,31.4,39.3C7.4,55.8,-21.2,62.2,-42,49.1C-62.9,36.1,-75.9,3.6,-67.6,-24.5C-59.3,-52.5,-29.7,-76.2,0.9,-76.4C31.4,-76.7,62.8,-53.7,68.8,-28.8Z"
+                    transform="translate(100 100)" />
+            </svg>
+            <svg class="svg-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#F2E7E2"
+                    d="M40.8,-72.1C50.8,-64.8,55.4,-49.7,61.4,-36.4C67.4,-23.1,74.8,-11.6,76.3,0.9C77.9,13.3,73.6,26.7,67.6,40.1C61.7,53.4,54,66.8,42.4,71.1C30.9,75.4,15.4,70.5,0.9,68.9C-13.6,67.3,-27.1,68.9,-36.8,63.5C-46.5,58.2,-52.3,45.9,-61,34.1C-69.6,22.4,-81.2,11.2,-85,-2.2C-88.9,-15.7,-85.2,-31.4,-75.6,-41.5C-66,-51.7,-50.6,-56.3,-37,-61.5C-23.4,-66.8,-11.7,-72.7,1.8,-75.9C15.4,-79,30.7,-79.5,40.8,-72.1Z"
                     transform="translate(100 100)" />
             </svg>
         </div>
@@ -66,18 +76,33 @@ export default {
 .aboutme-container {
     color: #e4edcf;
     background-color: #557174;
+    overflow: hidden;
 
     .aboutme-container-whoami {
         display: flex;
         justify-content: center;
         position: relative;
 
+        .svg-top {
+            position: absolute;
+            width: 150px;
+            opacity: .6;
+            top: -5px;
+            right: 500px;
+        }
+
+        .svg-right {
+            position: absolute;
+            width: 600px;
+            right: -350px;
+            opacity: .4;
+        }
 
         .a-button,
         .button {
-            height: 60px;
-            width: 200px;
-            border-radius: 6px;
+            height: 70px;
+            width: 220px;
+            border-radius: 8px;
             z-index: 3;
             animation: bounce 2s infinite;
         }
@@ -85,18 +110,16 @@ export default {
         a {
             position: absolute;
             right: 150px;
+            top: 10px;
 
             .button {
                 display: inline-block;
-                height: 60px;
-                width: 200px;
-                border-radius: 6px;
                 background-color: #de6b1e;
                 border: none;
                 transition: all 0.5s;
                 cursor: pointer;
                 color: #f7f7e8;
-                font-size: 0.95em;
+                font-size: 1em;
 
                 span {
                     display: inline-block;
@@ -154,13 +177,13 @@ export default {
 
                 .svg-text {
                     position: relative;
-                    transform: translateX(250px) translateY(-150px) rotate(3deg);
+                    transform: translateX(250px) translateY(-200px) rotate(3deg);
                     width: 900px;
-                    
                 }
+
                 p {
                     position: absolute;
-                    top: 70px;
+                    top: 20px;
                     left: 350px;
                     width: 600px;
                     color: #a8b78b;
@@ -179,7 +202,7 @@ export default {
             width: 600px;
             opacity: .8;
             left: -220px;
-            top: 200px;
+            top: 325px;
             transform: rotate(-180deg);
         }
     }

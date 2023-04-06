@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer @click="hideMenu">
         <div class="footer">
             <div class="row flex">
                 <a>
@@ -34,6 +34,12 @@
 
 <script>
 export default {
+    props: {
+        isMenuOpen: {
+            type: Boolean,
+            required: true
+        }
+    },
     computed: {
         getFullYear() {
             const date = new Date();
@@ -43,6 +49,11 @@ export default {
     methods: {
         scrollTo(id) {
             document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+        },
+        hideMenu() {
+            if (this.isMenuOpen) {
+                this.$emit('is-menu-open', false);
+            }
         }
     }
 }

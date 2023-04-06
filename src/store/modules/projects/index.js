@@ -28,6 +28,13 @@ export default {
                         github: 'https://github.com/ParvaCamer/wedding-sharing'
                     },
                     {
+                        title: 'Pokemon API',
+                        languages: ['React', 'SCSS'],
+                        description: 'First project in React using the PokeAPI API. Display of the desired pokemon with its details.',
+                        url: 'https://parvacamer-poke-api.netlify.app/',
+                        github: 'https://github.com/ParvaCamer/poke-api'
+                    },
+                    {
                         title: 'Weather Application',
                         languages: ['Vue.Js', 'ApiRestful', 'SASS'],
                         description: 'A simple weather application, with geolocation and data recovery system. We get information for the day in real time, as well as for the next 6 days. The city can be changed to access to new informations.',
