@@ -1,7 +1,7 @@
 <template>
   <Header @menu-is-open="menuOpen" :menuIsOpen="isMenuOpen" />
   <Home :isMenuOpen="isMenuOpen" @is-menu-open="menuOpen" />
-  <Footer :isMenuOpen="isMenuOpen" @is-menu-open="menuOpen"/>
+  <Footer :isMenuOpen="isMenuOpen" @is-menu-open="menuOpen" />
 </template>
 
 <script>
@@ -33,6 +33,9 @@ export default {
 
 body {
   margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #app {

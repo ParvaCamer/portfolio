@@ -32,18 +32,10 @@
 
 <script>
 export default {
-    props: ['title', 'languages', 'url', 'github'],
-    data() {
-        return {
-            imageUrl: new URL(`/src/assets/projects/${this.title}.png`, import.meta.url).href,
-            imageAlt: `${this.title} picture`,
-            show: false
-        }
-    },
+    props: ['title', 'languages', 'url', 'github', "imageUrl", "imageAlt"],
     methods: {
         showMore() {
-            this.show = !this.show;
-            this.$emit('emit-show', this.show);
+            this.$emit('emit-show', true);
         }
     }
 }
