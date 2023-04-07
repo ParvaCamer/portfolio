@@ -30,6 +30,10 @@ export default {
                     {
                         name: "JavaScript",
                         type: "Languages",
+                    },
+                    {
+                        name: "CSharp",
+                        type: "Languages",
                     }
                 ],
                 'frameworks, platforms & libraries': [

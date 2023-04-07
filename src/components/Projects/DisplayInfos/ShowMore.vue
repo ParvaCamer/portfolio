@@ -2,7 +2,8 @@
     <Teleport to="body">
         <div class="container-show-more" @click="hideShowMore"></div>
         <div class="card-show-more">
-            <div class="left-side">
+            <div class="left-side-circle"></div>
+            <div class="left-side" >
                 <h2>{{ title }}</h2>
                 <div class="left-side-bottom">
                     <a target="_blank" :href="github">
@@ -19,13 +20,14 @@
                     </a>
                 </div>
             </div>
-            <div class="right-side" v-bind:style="{ backgroundImage: 'url(' + imageUrl + ')' }">
+            <div class="right-side">
                 <h2>Let me explain you the project :</h2>
                 <div class="description-div">
                     <p>{{ description }}</p>
                 </div>
                 <div class="vfor-languages">
-                    <p v-for="language in languages" :key="language.id">{{ language }}</p>
+                    <p v-for="language in languages" :key="language.id" class="languages" :class="language">{{ language }}
+                    </p>
                 </div>
             </div>
         </div>
@@ -61,41 +63,74 @@ export default {
     background-color: #bbbbbb79;
 }
 
-
+$border-radius: 12px;
 .card-show-more {
     position: fixed;
     z-index: 150;
-    top: 30vh;
-    border: 1px solid black;
+    top: 25vh;
     display: flex;
     width: 50vw;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background: #ffffffe0;
+    border-radius: $border-radius;
+    overflow: hidden;
 
     ::-webkit-scrollbar {
         display: none;
     }
 
+    .left-side-circle {
+            position: absolute;
+            height: 600px;
+            width: 600px;
+            border-radius: 50%;
+            background: #a9b88c80;
+            top: -20%;
+            left: -250px;
+        }
+
     .left-side {
-        border-right: 1px solid black;
-        width: 33%;
+        width: 35%;
+        height: 400px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        text-align: center;
+        position: relative;
 
+        h2 {
+            margin-top: 80px;
+            font-size: 1.8em;
+            padding-left: 25px;
+        }
+        
         .left-side-bottom {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            align-items: center;
+            gap: 35px;
+            margin-bottom: 25px;
 
-            a, img{
+            a,
+            img {
                 width: 50px;
             }
         }
     }
 
     .right-side {
-        width: 66%;
+        width: 65%;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        z-index: 2;
+
+        h2 {
+            padding-left: 20px;
+        }
+
         .description-div {
             display: flex;
             flex-wrap: wrap;
@@ -105,6 +140,7 @@ export default {
             overflow-y: scroll;
 
             p {
+                margin: 0;
                 font-size: .9em;
                 @include unselectable;
                 overflow-y: hidden;
@@ -112,10 +148,166 @@ export default {
         }
 
         .vfor-languages {
-            p {
+            .languages {
+                margin: 10px 12px 0;
                 display: inline-block;
+                color: #ffffff;
+                padding: 8px 14px;
+                font-size: 1.15em;
+                border: .5px solid black;
+                border-radius: 6px;
             }
         }
     }
+}
+
+/*** Languages ***/
+.HTML {
+    background-color: #F16529;
+}
+
+/* CSS3 */
+.CSS {
+    background-color: #2561E9;
+}
+
+/* JavaScript */
+.JavaScript {
+    background-color: #F2D53C;
+}
+
+/* CSharp */
+.CSharp {
+    background-color: #91498C;
+}
+
+/* Frameworks, Platforms & Libraries */
+.VueJs {
+    background-color: #00BC7C;
+}
+
+.Vue-Router {
+    background-color: #009664;
+}
+
+.Vuex {
+    background-color: #32475B;
+}
+
+.Composition-API {
+    background-color: #22313f;
+}
+
+/* React */
+.React {
+    background-color: #17B6E7;
+}
+
+/* NodeJs */
+.NodeJs {
+    background-color: #6AA05C;
+}
+
+/* Express */
+.Express {
+    background-color: #030703;
+}
+
+/* Pinia */
+.Pinia {
+    background-color: #8ECF5B;
+}
+
+/* Nuxt */
+.Nuxt {
+    background-color: #397C6C;
+}
+
+/* SASS */
+.SCSS {
+    background-color: #C76494;
+}
+
+/* Tailwind */
+.Tailwind {
+    background-color: #3C9DAC;
+}
+
+/* jQuery */
+.jQuery {
+    background-color: #0769AD;
+}
+
+/* Bootstrap */
+.Bootstrap {
+    background-color: #7952B3;
+}
+
+/* Less */
+.Less {
+    background-color: #1D365D;
+}
+
+/* NPM */
+.NPM {
+    background-color: #CB3837;
+}
+
+/* Databases */
+.MySQL {
+    background-color: #4479A1;
+}
+
+/* MongoDB */
+.MongoDB {
+    background-color: #61A753;
+}
+
+/* Hosting/SaaS */
+.Firebase {
+    background-color: #F7A10F;
+}
+
+/* Netlify */
+.Netlify {
+    background-color: #00C7B7;
+}
+
+/* Other */
+.Vite {
+    background-color: #646CFF;
+}
+
+/* Github */
+.Github {
+    background-color: #181717;
+}
+
+/* Git */
+.Git {
+    background-color: #F1502F;
+}
+
+/* ESLint */
+.ESLint {
+    background-color: #4B32C3;
+}
+
+/* Docker */
+.Docker {
+    background-color: #2496ED;
+}
+
+/* Wordpress */
+.Wordpress {
+    background-color: #30353A;
+}
+
+.ApiRestful {
+    background-color: #b1c8db;
+}
+
+.Encrypted-Data {
+    background-color: #aaacad;
 }
 </style>

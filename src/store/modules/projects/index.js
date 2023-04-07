@@ -6,7 +6,7 @@ export default {
                 'freelance projects': [
                     {
                         title: 'Fire Station Open Day',
-                        languages: ['Vue.Js', 'Vue Router', 'ApiRestful', 'Firebase', 'CSS'],
+                        languages: ['VueJs', 'Vue-Router', 'ApiRestful', 'Firebase', 'CSS'],
                         description: "A project made for the open day of the Marcq-en-Barœul's fire station (near the city Lille). The idea was that users scan the QR connection code at the entrance of the fire station to create an account first. Then to scan the QR codes of the questions located at the corresponding stands, inside the barrack. I wanted to make sure that the organizer could create a new activity, then modify or delete it afterwards, without asking me. By creating an activity, a QR code is automatically generated, thus linking the question with this QR code. The activity works like a quiz : there are a question and proposals. And if you answer correctly, you get a point. The application had to be responsive, because people were going to use their phone to scan the QR code. Some modifications have been made on this project so that you can have a better experience when using it",
                         url: 'https://portes-ouvertes-2022.netlify.app',
                         github: 'https://github.com/ParvaCamer/portes-ouvertes-2022'
@@ -22,7 +22,7 @@ export default {
                 'individual projects': [
                     {
                         title: 'Wedding Sharing',
-                        languages: ['Vue.Js', 'VueRouter', 'CSS', 'Firebase', 'ApiRestful', 'Vite', 'Encrypted data'],
+                        languages: ['VueJs', 'Vue-Router', 'CSS', 'Firebase', 'ApiRestful', 'Vite', 'Encrypted-Data'],
                         description: "A website for storing and downloading images. Specialized in wedding theme. Admin can create space, add, delete or edit the images. Each space is protected. The administrator can give the rights to visitors to also add photos, or restrict them to downloading only. We were two for this project: <a href='https://github.com/KonisDesign'>Julien Devos</a> who took care of the design and CSS, and myself who follows me busy with the rest. If you have a problem with downloading, it's the CORS Policy that prevents you from doing so. I don't have a solution at the moment.",
                         url: 'https://wedding-sharing.netlify.app/',
                         github: 'https://github.com/ParvaCamer/wedding-sharing'
@@ -36,7 +36,7 @@ export default {
                     },
                     {
                         title: 'Weather Application',
-                        languages: ['Vue.Js', 'ApiRestful', 'SASS'],
+                        languages: ['VueJs', 'ApiRestful', 'SCSS'],
                         description: 'A simple weather application, with geolocation and data recovery system. We get information for the day in real time, as well as for the next 6 days. The city can be changed to access to new informations.',
                         url: 'https://parvacamer-weather-application.netlify.app/',
                         github: 'https://github.com/ParvaCamer/weather-app'
@@ -50,7 +50,7 @@ export default {
                     },
                     {
                         title: 'Hanged-Man Game',
-                        languages: ['HTML', 'CSS', 'LESS', 'JavaScript'],
+                        languages: ['HTML', 'CSS', 'Less', 'JavaScript'],
                         description: 'A hangman game with random generation of words',
                         url: 'https://parvacamer.github.io/hanged-man/',
                         github: 'https://github.com/ParvaCamer/hanged-man'
@@ -80,31 +80,31 @@ export default {
                 'learning projects': [
                     {
                         title: 'First Project Vue.Js',
-                        languages: ['HTML', 'CSS', 'JavaScript', 'Vue.Js'],
+                        languages: ['HTML', 'CSS', 'JavaScript', 'VueJs'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple turn-based game',
-                        url: 'https://parvacamer.github.io/FirstProjectUdemy-Vue.Js/',
-                        github: 'https://github.com/ParvaCamer/FirstProjectUdemy-Vue.Js'
+                        url: 'https://parvacamer.github.io/FirstProjectUdemy-VueJs/',
+                        github: 'https://github.com/ParvaCamer/FirstProjectUdemy-VueJs'
                     },
                     {
                         title: 'Second Project Vue.Js',
-                        languages: ['Vue.Js'],
+                        languages: ['VueJs'],
                         description: 'A project made with a VueJs course on Udemy. This project was a realization of a resource storage. You can either consult them or add more resources',
                         url: 'https://second-project-udemy-vuejs.netlify.app/',
-                        github: 'https://github.com/ParvaCamer/SecondProjectUdemy-Vue.Js'
+                        github: 'https://github.com/ParvaCamer/SecondProjectUdemy-VueJs'
                     },
                     {
                         title: 'Third Project Vue.Js',
-                        languages: ['Vue.Js', 'Vue Router', 'Vuex'],
+                        languages: ['VueJs', 'Vue-Router', 'Vuex'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple online store',
                         url: 'https://third-project-udemy-vuejs.netlify.app/',
-                        github: 'https://github.com/ParvaCamer/ThirdProjectUdemy-Vue.Js'
+                        github: 'https://github.com/ParvaCamer/ThirdProjectUdemy-VueJs'
                     },
                     {
                         title: 'Main Project Vue.Js',
-                        languages: ['Vue.Js', 'Vue Router', 'Vuex', 'Composition API', 'API Restful', 'Firebase'],
+                        languages: ['VueJs', 'Vue-Router', 'Vuex', 'Composition-API', 'ApiRestful', 'Firebase'],
                         description: 'The last and main project with the VueJs course on Udemy. The objective was to be able to authenticate as a coach in order to be able to create a profile there. The visitor can therefore consult the information of each coach as well as contact them',
                         url: 'https://main-project-udemy-vuejs.netlify.app/',
-                        github: 'https://github.com/ParvaCamer/MainProjectUdemy-Vue.Js'
+                        github: 'https://github.com/ParvaCamer/MainProjectUdemy-VueJs'
                     }
                 ],
                 'bootcamp projects': [
@@ -124,7 +124,7 @@ export default {
                     },
                     {
                         title: 'Turn-based board game',
-                        languages: ['HTML', 'CSS', 'JS'],
+                        languages: ['HTML', 'CSS', 'JavaScript'],
                         description: 'A project requested by my bootcamp OpenClassrooms. I had to create a turn-based board game with JavaScript',
                         url: 'https://parvacamer.github.io/OpenClassroomsP6/',
                         github: 'https://github.com/ParvaCamer/OpenClassroomsP6'
@@ -138,8 +138,8 @@ export default {
                     },
                     {
                         title: 'Restaurants reviews website',
-                        languages: ['Vue.Js', 'API Restful', 'CSS'],
-                        description: `A project requested by my bootcamp OpenClassrooms. This project is the first I coded with Vue.js, I only changed the CSS for a better experience for you. I had to do my own restaurants reviews website.`,
+                        languages: ['VueJs', 'ApiRestful', 'CSS'],
+                        description: `A project requested by my bootcamp OpenClassrooms. This project is the first I coded with VueJs, I only changed the CSS for a better experience for you. I had to do my own restaurants reviews website.`,
                         url: 'https://github.com/ParvaCamer/OpenClassroomsP7',
                         github: 'https://github.com/ParvaCamer/OpenClassroomsP7'
                     },
