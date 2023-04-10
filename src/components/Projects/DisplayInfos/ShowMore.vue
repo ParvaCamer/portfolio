@@ -2,8 +2,10 @@
     <Teleport to="body">
         <div class="container-show-more" @click="hideShowMore"></div>
         <div class="card-show-more">
-            <div class="left-side-circle"></div>
-            <div class="left-side" >
+            <div class="circle left-side-circle"></div>
+            <div class="circle right-side-circle"></div>
+            <div class="left-side">
+                <img class="img-favicon" :src="favicon" alt="favicon image"/>
                 <h2>{{ title }}</h2>
                 <div class="left-side-bottom">
                     <a target="_blank" :href="github">
@@ -16,12 +18,12 @@
                         </span>
                     </a>
                     <a :href="url" target="_blank">
-                        <img src="../../../assets/link-logo.svg" />
+                        <img src="../../../assets/link-logo.svg" alt="link svg"/>
                     </a>
                 </div>
             </div>
             <div class="right-side">
-                <h2>Let me explain you the project :</h2>
+                <h2>Some informations about it :</h2>
                 <div class="description-div">
                     <p>{{ description }}</p>
                 </div>
@@ -37,6 +39,11 @@
 <script>
 export default {
     props: ['url', 'title', 'description', 'github', "imageUrl", "languages"],
+    data() {
+        return {
+            favicon: new URL(`/src/assets/favicon/${this.title}.ico`, import.meta.url).href
+        }
+    },
     methods: {
         hideShowMore() {
             this.$emit('emit-show', false)
@@ -64,6 +71,7 @@ export default {
 }
 
 $border-radius: 12px;
+
 .card-show-more {
     position: fixed;
     z-index: 150;
@@ -80,15 +88,24 @@ $border-radius: 12px;
         display: none;
     }
 
-    .left-side-circle {
-            position: absolute;
-            height: 600px;
-            width: 600px;
-            border-radius: 50%;
+    .circle {
+        position: absolute;
+        height: 600px;
+        width: 600px;
+        border-radius: 50%;
+
+        &.left-side-circle {
             background: #a9b88c80;
             top: -20%;
             left: -250px;
         }
+
+        &.right-side-circle {
+            background: #556f7280;
+            top: 30%;
+            right: -30%;
+        }
+    }
 
     .left-side {
         width: 35%;
@@ -96,15 +113,23 @@ $border-radius: 12px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        align-items: center;
         text-align: center;
         position: relative;
 
-        h2 {
-            margin-top: 80px;
-            font-size: 1.8em;
-            padding-left: 25px;
+        .img-favicon {
+            width: 200px;
+            position: absolute;
+            transform: translateY(45%);
+            opacity: .4;
         }
-        
+
+        h2 {
+            font-size: 1.8em;
+            padding-left: 10px;
+            padding-top: 40px;
+        }
+
         .left-side-bottom {
             display: flex;
             justify-content: center;
@@ -112,9 +137,13 @@ $border-radius: 12px;
             gap: 35px;
             margin-bottom: 25px;
 
-            a,
-            img {
+            a {
                 width: 50px;
+                transition: filter .4s;
+
+                &:hover {
+                    filter : invert(45%) sepia(0%) saturate(0%) hue-rotate(172deg) brightness(97%) contrast(83%);
+                }
             }
         }
     }
@@ -141,7 +170,7 @@ $border-radius: 12px;
 
             p {
                 margin: 0;
-                font-size: .9em;
+                font-size: 1.1em;
                 @include unselectable;
                 overflow-y: hidden;
             }

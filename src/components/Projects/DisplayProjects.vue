@@ -1,9 +1,9 @@
 <template>
-    <div class="container-display-projects">
+    <div :class="`container-display-projects ${title}`">
         <MainCard class="main-card" @emit-show="emitShow" :url="url" :imageUrl="imageUrl" :imageAlt="imageAlt"
             :title="title" :languages="languages" :github="github" />
-        <ShowMore class="show-more" @emit-show="emitShow" v-if="display" :url="url" :imageUrl="imageUrl" :title="title" :description="description"
-            :github="github" :languages="languages"/>
+        <ShowMore class="show-more" @emit-show="emitShow" v-if="display" :url="url" :imageUrl="imageUrl" :title="title"
+            :description="description" :github="github" :languages="languages" />
     </div>
 </template>
 
@@ -26,7 +26,6 @@ export default {
     methods: {
         emitShow(value) {
             this.display = value;
-            console.log(this.languages)
         }
     }
 }

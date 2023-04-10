@@ -2,14 +2,14 @@
     <footer @click="hideMenu">
         <div class="footer">
             <div class="row flex">
-                <a>
-                    <img src="../../assets/Footer/envelope-solid.svg" />
+                <a href="mailto:romain.camerlynck@gmail.com">
+                    <img src="../../assets/Footer/envelope-solid.svg" alt="envelope svg"/>
                 </a>
                 <a href="https://www.linkedin.com/in/romain-camerlynck-b974a6177/" target="_blank">
-                    <img src="../../assets/Footer/linkedin.svg" />
+                    <img src="../../assets/Footer/linkedin.svg" alt="linkedin svg"/>
                 </a>
                 <a href="https://github.com/ParvaCamer" target="_blank">
-                    <img src="../../assets/Footer/github.svg" />
+                    <img src="../../assets/Footer/github.svg" alt="github svg"/>
                 </a>
             </div>
             <div class="row">
