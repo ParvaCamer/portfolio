@@ -2,12 +2,21 @@
     <h1 id="progress">Website in progress</h1>
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
+            <div class="home-favicon-animation">
+                <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" :style="{
+                    width: icon.width,
+                    transform: icon.rotate,
+                    opacity: icon.opacity,
+                    animationDuration: index * 3 + 's',
+                    top: icon.top
+                }" />
+            </div>
             <div class="home-container-flex">
                 <h1>Hello there !</h1>
                 <h2>My name is Romain Camerlynck</h2>
                 <h3>I am a <span>Front-end</span> developer</h3>
             </div>
-            <img src="../assets/picture-profile.png" alt="picture profile"/>
+            <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#557174" fill-opacity="1"
                     d="M0,32L48,69.3C96,107,192,181,288,229.3C384,277,480,299,576,272C672,245,768,171,864,165.3C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -22,11 +31,44 @@
 <script>
 import AboutMe from './AboutMe.vue';
 import Projects from './Projects.vue';
+import Favicon from '../components/Home/Favicon.vue';
 
 export default {
     components: {
         AboutMe,
-        Projects
+        Projects,
+        Favicon
+    },
+    created() {
+        const iconFiles = import.meta.glob('/src/assets/favicon/*');
+        this.icons = Object.keys(iconFiles).map(key => {
+            const fileName = key.split('/').pop();
+            return {
+                name: fileName,
+                url: key,
+                width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
+                rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
+                opacity: Math.random() * (0.9 - 0.7) + 0.7,
+                top: Math.random() * (75 - 40) + 40 + '%',
+                animationDuration: '2s'
+            };
+        });
+    },
+    mounted() {
+        const icons = document.querySelectorAll('.home-favicon-animation img');
+        let index = 0;
+        setInterval(() => {
+            icons[index].classList.add('show');
+            index++;
+            if (index === icons.length) {
+                index = 0;
+            }
+        }, 2000);
+    },
+    data() {
+        return {
+            icons: []
+        }
     },
     props: {
         isMenuOpen: {
@@ -39,7 +81,7 @@ export default {
             if (this.isMenuOpen) {
                 this.$emit('is-menu-open', false);
             }
-        }
+        },
     }
 }
 </script>
@@ -59,6 +101,12 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .home-favicon-animation {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
 
     .home-container-flex {
         display: flex;
@@ -86,7 +134,7 @@ export default {
         }
     }
 
-    img {
+    .picture-profile-image {
         position: relative;
         width: 400px;
         top: 20px;

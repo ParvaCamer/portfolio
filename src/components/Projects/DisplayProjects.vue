@@ -1,5 +1,5 @@
 <template>
-    <div :class="`container-display-projects ${title}`">
+    <div :class="`container-display-projects ${title.replace(/ /g, '')}`">
         <MainCard class="main-card" @emit-show="emitShow" :url="url" :imageUrl="imageUrl" :imageAlt="imageAlt"
             :title="title" :languages="languages" :github="github" />
         <ShowMore class="show-more" @emit-show="emitShow" v-if="display" :url="url" :imageUrl="imageUrl" :title="title"
