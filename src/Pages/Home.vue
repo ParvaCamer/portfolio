@@ -7,7 +7,7 @@
                     width: icon.width,
                     transform: icon.rotate,
                     opacity: icon.opacity,
-                    animationDuration: index * 3 + 's',
+                    animationDuration: ( Math.sqrt(index + 1) ) * 10 + 's',
                     top: icon.top
                 }" />
             </div>
@@ -48,22 +48,10 @@ export default {
                 url: key,
                 width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
                 rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
-                opacity: Math.random() * (0.9 - 0.7) + 0.7,
-                top: Math.random() * (75 - 40) + 40 + '%',
-                animationDuration: '2s'
+                opacity: Math.random() * (0.5 - 0.3) + 0.3,
+                top: Math.random() * (80 - 30) + 30 + '%',
             };
         });
-    },
-    mounted() {
-        const icons = document.querySelectorAll('.home-favicon-animation img');
-        let index = 0;
-        setInterval(() => {
-            icons[index].classList.add('show');
-            index++;
-            if (index === icons.length) {
-                index = 0;
-            }
-        }, 2000);
     },
     data() {
         return {
@@ -101,6 +89,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
 
     .home-favicon-animation {
         position: absolute;
