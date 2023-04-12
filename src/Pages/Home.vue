@@ -3,13 +3,15 @@
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
             <div class="home-favicon-animation">
-                <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" :style="{
+                <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))"
+                :style="{
                     width: icon.width,
                     transform: icon.rotate,
                     opacity: icon.opacity,
-                    animationDuration: ( Math.sqrt(index + 1) ) * 10 + 's',
+                    animationDuration: (index < (icons.length / 2)) ? ( Math.sqrt(index + 1) ) * 14 + 's' : ( Math.sqrt(index + 1) ) * 6 + 's',
                     top: icon.top
-                }" />
+                    }" 
+                />
             </div>
             <div class="home-container-flex">
                 <h1>Hello there !</h1>
@@ -51,6 +53,7 @@ export default {
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
                 top: Math.random() * (80 - 30) + 30 + '%',
             };
+            
         });
     },
     data() {
@@ -69,6 +72,10 @@ export default {
             if (this.isMenuOpen) {
                 this.$emit('is-menu-open', false);
             }
+        },
+        scrollTo(id) {
+            console.log('#' + id)
+            document.querySelector('#' + id).scrollIntoView({ behavior: 'smooth' });
         },
     }
 }

@@ -14,11 +14,12 @@ export default {
     animation-name: slide;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    cursor: pointer;
 }
 
 @keyframes slide {
     0% {
-        left: -25%;
+        left: -30%;
     }
 
     100% {

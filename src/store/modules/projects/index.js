@@ -79,28 +79,28 @@ export default {
                 ],
                 'learning projects': [
                     {
-                        title: 'First Project Vue.Js',
+                        title: 'First Project VueJs',
                         languages: ['HTML', 'CSS', 'JavaScript', 'VueJs'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple turn-based game',
                         url: 'https://parvacamer.github.io/FirstProjectUdemy-VueJs/',
                         github: 'https://github.com/ParvaCamer/FirstProjectUdemy-Vue.Js'
                     },
                     {
-                        title: 'Second Project Vue.Js',
+                        title: 'Second Project VueJs',
                         languages: ['VueJs'],
                         description: 'A project made with a VueJs course on Udemy. This project was a realization of a resource storage. You can either consult them or add more resources',
                         url: 'https://second-project-udemy-vuejs.netlify.app/',
                         github: 'https://github.com/ParvaCamer/SecondProjectUdemy-Vue.Js'
                     },
                     {
-                        title: 'Third Project Vue.Js',
+                        title: 'Third Project VueJs',
                         languages: ['VueJs', 'Vue-Router', 'Vuex'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple online store',
                         url: 'https://third-project-udemy-vuejs.netlify.app/',
                         github: 'https://github.com/ParvaCamer/ThirdProjectUdemy-Vue.Js'
                     },
                     {
-                        title: 'Main Project Vue.Js',
+                        title: 'Main Project VueJs',
                         languages: ['VueJs', 'Vue-Router', 'Vuex', 'Composition-API', 'ApiRestful', 'Firebase'],
                         description: 'The last and main project with the VueJs course on Udemy. The objective was to be able to authenticate as a coach in order to be able to create a profile there. The visitor can therefore consult the information of each coach as well as contact them',
                         url: 'https://main-project-udemy-vuejs.netlify.app/',
