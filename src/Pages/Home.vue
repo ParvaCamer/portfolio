@@ -2,6 +2,7 @@
     <h1 id="progress">Website in progress</h1>
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
+            <img src="../../public/pc.svg" class="logo-image" alt="logo"/>
             <div class="home-favicon-animation">
                 <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))"
                 :style="{
@@ -14,9 +15,8 @@
                 />
             </div>
             <div class="home-container-flex">
-                <h1>Hello there !</h1>
-                <h2>My name is Romain Camerlynck</h2>
-                <h3>I am a <span>Front-end</span> developer</h3>
+                <h1>Camerlynck Romain</h1>
+                <h3><span>Vue.Js / React Front-end</span> developer</h3>
             </div>
             <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -93,10 +93,14 @@ export default {
     color: #a8b78b;
     height: 100vh;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     overflow: hidden;
+
+    .logo-image {
+        width: 50px;
+        position: absolute;
+        top: 25px;
+        left: 100px;
+    }
 
     .home-favicon-animation {
         position: absolute;
@@ -107,33 +111,28 @@ export default {
     .home-container-flex {
         display: flex;
         flex-direction: column;
-        padding-left: 250px;
 
         h1 {
             position: relative;
-            right: 80px;
-            font-size: 3.5em;
-            margin-top: 0;
+            width: auto;
+            font-size: 6em;
         }
 
         h2 {
             font-size: 2.3em;
-            text-align: center;
         }
 
         h3 {
             position: relative;
-            top: 20px;
-            left: 80px;
             font-size: 1.8em;
-            text-align: right;
         }
     }
 
     .picture-profile-image {
-        position: relative;
-        width: 400px;
-        top: 20px;
+        position: absolute;
+        width: 500px;
+        right: 0;
+        bottom: 40px;
         filter: drop-shadow(25px -10px 20px #4d4d4d);
     }
 

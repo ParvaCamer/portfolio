@@ -111,7 +111,7 @@ footer {
 
                 li {
                     cursor: pointer;
-                    width: 100px;
+                    width: 115px;
                     display: inline-block;
                     margin: 0px 30px;
                     z-index: 1;

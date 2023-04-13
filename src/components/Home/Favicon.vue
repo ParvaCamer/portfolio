@@ -15,6 +15,12 @@ export default {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     cursor: pointer;
+    transition: all .4s;
+    &:hover {
+        animation-play-state: paused;
+        opacity: 1 !important;
+        transform: scale(1.05) !important;
+    }
 }
 
 @keyframes slide {
