@@ -17,6 +17,7 @@
             <div class="home-container-flex">
                 <h1>Camerlynck Romain</h1>
                 <h3><span>Vue.Js / React Front-end</span> developer</h3>
+                <LogoReachMe :style="changeLogoColor"/>
             </div>
             <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -34,12 +35,14 @@
 import AboutMe from './AboutMe.vue';
 import Projects from './Projects.vue';
 import Favicon from '../components/Home/Favicon.vue';
+import LogoReachMe from '../components/UI/LogoReachMe.vue';
 
 export default {
     components: {
         AboutMe,
         Projects,
-        Favicon
+        Favicon,
+        LogoReachMe
     },
     created() {
         const iconFiles = import.meta.glob('/src/assets/favicon/*');
@@ -65,6 +68,15 @@ export default {
         isMenuOpen: {
             type: Boolean,
             required: true
+        }
+    },
+    computed: {
+        changeLogoColor() {
+            return {
+                '--color': "invert(48%) sepia(6%) saturate(1542%) hue-rotate(138deg) brightness(83%) contrast(80%)",
+                '--color-hover': "invert(72%) sepia(19%) saturate(417%) hue-rotate(39deg) brightness(95%) contrast(91%)",
+                '--width': '30px'
+            }
         }
     },
     methods: {
@@ -94,6 +106,8 @@ export default {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    display: flex;
+
 
     .logo-image {
         width: 50px;
@@ -103,14 +117,14 @@ export default {
     }
 
     .home-favicon-animation {
-        position: absolute;
-        width: 100%;
-        height: 100%;
+        position: relative;
+        width: 50%;
     }
 
     .home-container-flex {
         display: flex;
         flex-direction: column;
+        height: auto;
 
         h1 {
             position: relative;

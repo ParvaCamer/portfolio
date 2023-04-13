@@ -2,15 +2,7 @@
     <footer @click="hideMenu">
         <div class="footer">
             <div class="row flex">
-                <a href="mailto:romain.camerlynck@gmail.com">
-                    <img src="../../assets/Footer/envelope-solid.svg" alt="envelope svg"/>
-                </a>
-                <a href="https://www.linkedin.com/in/romain-camerlynck-b974a6177/" target="_blank">
-                    <img src="../../assets/Footer/linkedin.svg" alt="linkedin svg"/>
-                </a>
-                <a href="https://github.com/ParvaCamer" target="_blank">
-                    <img src="../../assets/Footer/github.svg" alt="github svg"/>
-                </a>
+                <LogoReachMe :style="changeLogoColor"/>
             </div>
             <div class="row">
                 <ul>
@@ -33,7 +25,11 @@
 </template>
 
 <script>
+import LogoReachMe from '../UI/LogoReachMe.vue';
 export default {
+    components: {
+        LogoReachMe
+    },
     props: {
         isMenuOpen: {
             type: Boolean,
@@ -44,6 +40,13 @@ export default {
         getFullYear() {
             const date = new Date();
             return date.getFullYear();
+        },
+        changeLogoColor() {
+            return {
+                '--color': "invert(95%) sepia(7%) saturate(702%) hue-rotate(33deg) brightness(104%) contrast(86%)",
+                '--color-hover': "invert(95%) sepia(5%) saturate(2119%) hue-rotate(26deg) brightness(80%) contrast(75%)",
+                '--width': '45px'
+            }
         }
     },
     methods: {
@@ -89,22 +92,6 @@ footer {
                 margin-top: 120px;
             }
 
-            a {
-                text-decoration: none;
-                cursor: pointer;
-                z-index: 1;
-
-                img {
-                    width: 45px;
-                    filter: invert(95%) sepia(7%) saturate(702%) hue-rotate(33deg) brightness(104%) contrast(86%);
-                    transition: filter .5s;
-
-                    &:hover {
-                        filter: invert(95%) sepia(5%) saturate(2119%) hue-rotate(26deg) brightness(80%) contrast(75%);
-                    }
-                }
-            }
-
             ul {
                 width: 100%;
                 padding: 0;
@@ -143,4 +130,5 @@ footer {
     .footer .row a i {
         margin: 0% 3%;
     }
-}</style>
+}
+</style>
