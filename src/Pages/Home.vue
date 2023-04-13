@@ -2,7 +2,7 @@
     <h1 id="progress">Website in progress</h1>
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
-            <img src="../../public/pc.svg" class="logo-image" alt="logo"/>
+            <img src="../../pc.svg" class="logo-image" alt="logo"/>
             <div class="home-favicon-animation">
                 <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))"
                 :style="{
