@@ -1,23 +1,24 @@
 <template>
-    <h1 id="progress">Website in progress</h1>
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
-            <img src="../../pc.svg" class="logo-image" alt="logo"/>
+            <img src="../../pc.svg" class="logo-image" alt="logo" />
             <div class="home-favicon-animation">
-                <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index" @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))"
-                :style="{
-                    width: icon.width,
-                    transform: icon.rotate,
-                    opacity: icon.opacity,
-                    animationDuration: (index < (icons.length / 2)) ? ( Math.sqrt(index + 1) ) * 14 + 's' : ( Math.sqrt(index + 1) ) * 6 + 's',
-                    top: icon.top
-                    }" 
-                />
+                <h3><span>Vue.Js - React Front-end</span> and Fullstack .NET developer, based in Lille in France.</h3>
+                <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index"
+                    @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))" :style="{
+                        width: icon.width,
+                        transform: icon.rotate,
+                        opacity: icon.opacity,
+                        animationDuration: (index < (icons.length / 2)) ? (Math.sqrt(index + 1)) * 14 + 's' : (Math.sqrt(index + 1)) * 6 + 's',
+                        top: icon.top
+                    }" />
             </div>
             <div class="home-container-flex">
+                <span></span>
                 <h1>Camerlynck Romain</h1>
-                <h3><span>Vue.Js / React Front-end</span> developer</h3>
-                <LogoReachMe :style="changeLogoColor"/>
+                <div class="home-container-logo-flex">
+                    <LogoReachMe :style="changeLogoColor" />
+                </div>
             </div>
             <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -56,7 +57,7 @@ export default {
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
                 top: Math.random() * (80 - 30) + 30 + '%',
             };
-            
+
         });
     },
     data() {
@@ -94,12 +95,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-#progress {
-    position: absolute;
-    left: 40%;
-    margin: 0;
-    color: rgb(196, 62, 62);
-}
 
 .home-container {
     color: #a8b78b;
@@ -118,27 +113,31 @@ export default {
 
     .home-favicon-animation {
         position: relative;
-        width: 50%;
+        width: 60vw;
+
+        h3 {
+            position: relative;
+            font-size: 3em;
+            z-index: 2;
+        }
     }
 
     .home-container-flex {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         height: auto;
 
         h1 {
             position: relative;
-            width: auto;
-            font-size: 6em;
+            font-size: 7em;
+            margin: 50px 0 0;
         }
 
-        h2 {
-            font-size: 2.3em;
-        }
-
-        h3 {
-            position: relative;
-            font-size: 1.8em;
+        .home-container-logo-flex {
+            display: flex;
+            align-items: center;
+            gap: 25px;
         }
     }
 

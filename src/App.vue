@@ -29,7 +29,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display&display=swap');
 
 body {
   margin: 0;
@@ -37,6 +37,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Bebas Neue', cursive;
+  font-family: 'Playfair Display', serif;
   letter-spacing: 2px;
 }
 

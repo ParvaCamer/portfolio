@@ -7,10 +7,10 @@
                 <span :class="{ active: isMenuOpen }"></span>
             </div>
             <ul class="menu-items" :class="{ active: isMenuOpen }">
-                <li><a @click="scrollTo('.home-container')">Home</a></li>
-                <li><a @click="scrollTo('.aboutme-container')">About Me</a></li>
-                <li><a @click="scrollTo('.projects-container')">My Projects</a></li>
-                <li><a @click="scrollTo('.footer')">Reach me</a></li>
+                <li><a @click="scrollTo('.home-container')">Home<span></span></a></li>
+                <li><a @click="scrollTo('.aboutme-container')">About Me<span></span></a></li>
+                <li><a @click="scrollTo('.projects-container')">My Projects<span></span></a></li>
+                <li><a @click="scrollTo('.footer')">Reach me<span></span></a></li>
             </ul>
         </nav>
         <div class="burger-circle" :class="{ show: isMenuOpen }"></div>
@@ -43,7 +43,7 @@ export default {
     watch: {
         menuIsOpen(newValue) {
             this.isMenuOpen = newValue;
-            if (!newValue) 
+            if (!newValue)
                 setTimeout(() => {
                     document.querySelector('.a-button').style.zIndex = "3"
                 }, 300);;
@@ -127,21 +127,42 @@ header {
             }
 
             li {
-                padding: 10px 0;
+                padding: 10px 0 2px;
                 font-size: 1.4em;
+                position: relative;
+                transition: all 0.3s ease-in-out;
+                z-index: 1;
             }
 
             a {
                 text-decoration: none;
                 color: #F7F7E8;
                 cursor: pointer;
-                transition: color .5s;
+                transition: color 0.5s ease-in-out;
 
                 &:hover {
                     color: #557174;
+                    span {
+                        width: 50%;
+                        background-color: #557174;
+                    }
+                }
+
+                span {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: #F7F7E8;
+                    transition: all 0.3s ease-in-out;
+                    z-index: -1;
                 }
             }
         }
+
+
     }
 
     .burger-circle {
