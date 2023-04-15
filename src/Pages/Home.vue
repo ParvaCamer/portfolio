@@ -1,7 +1,7 @@
 <template>
     <div class="app-container" @click="hideMenu">
         <div class="home-container">
-            <img src="../../pc.svg" class="logo-image" alt="logo" />
+            <img src="../assets/pc.svg" class="logo-image" alt="logo" />
             <div class="home-favicon-animation">
                 <h3>Vue.Js / React Front-end and Fullstack .NET developer, living in Lille in France.</h3>
                 <h4>- All of my projects are here -</h4>
