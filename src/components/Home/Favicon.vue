@@ -1,35 +1,40 @@
 <template>
-    <img class="animated-image">
+    <img class="animated-image" :style="{ transform: rotate }">
 </template>
 
 <script>
 export default {
-    props: ['index']
+    props: ['rotate'],
+    computed: {
+        getRotate() {
+            return this.rotate;
+        }
+    }
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .animated-image {
+    animation: slide-down ease forwards infinite;
     position: absolute;
-    animation-name: slide;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     cursor: pointer;
     transition: all .4s;
+
+    --rotate-value: {{ getRotate }};
+
     &:hover {
         animation-play-state: paused;
         opacity: 1 !important;
-        transform: scale(1.05) !important;
     }
 }
 
-@keyframes slide {
-    0% {
-        left: -30%;
-    }
+@keyframes slide-down {
+  from {
+    transform: translateY(-100vh) rotate(var(--rotate-value));
+  }
 
-    100% {
-        left: 90%;
-    }
+  to {
+    transform: translateY(90vh) rotate(var(--rotate-value));
+  }
 }
 </style>

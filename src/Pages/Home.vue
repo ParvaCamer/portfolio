@@ -3,20 +3,21 @@
         <div class="home-container">
             <img src="../../pc.svg" class="logo-image" alt="logo" />
             <div class="home-favicon-animation">
-                <h3><span>Vue.Js - React Front-end</span> and Fullstack .NET developer, based in Lille in France.</h3>
+                <h3>Vue.Js / React Front-end and Fullstack .NET developer, living in Lille in France.</h3>
+                <h4>- All of my projects are here -</h4>
+                <span></span>
                 <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index"
-                    @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))" :style="{
-                        width: icon.width,
+                    @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))" 
+                    :style="{
                         transform: icon.rotate,
+                        width: icon.width,
                         opacity: icon.opacity,
-                        animationDuration: (index < (icons.length / 2)) ? (Math.sqrt(index + 1)) * 14 + 's' : (Math.sqrt(index + 1)) * 6 + 's',
-                        top: icon.top
+                        left: icon.left,
+                        animationDuration: (index < (icons.length / 2)) ? ((Math.sqrt(index + 1)) * 6 + (index * 0.5)) + 's' : (Math.sqrt(index + 2)) * 6 + (index - (icons.length / 2)) + 's'
                     }" />
             </div>
             <div class="home-container-flex">
                 <h1>Romain Camerlynck
-                    <span></span>
-                    <span></span>
                     <span></span>
                 </h1>
                 <div class="home-container-logo-flex">
@@ -59,9 +60,8 @@ export default {
                 width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
                 rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
-                top: Math.random() * (80 - 30) + 30 + '%',
+                left: Math.random() * (150 - 5) + 5 + 'px'
             };
-
         });
     },
     data() {
@@ -82,7 +82,8 @@ export default {
                 '--color-hover': "invert(72%) sepia(19%) saturate(417%) hue-rotate(39deg) brightness(95%) contrast(91%)",
                 '--width': '30px'
             }
-        }
+        },
+        
     },
     methods: {
         hideMenu() {
@@ -91,14 +92,13 @@ export default {
             }
         },
         scrollTo(id) {
-            console.log('#' + id)
             document.querySelector('#' + id).scrollIntoView({ behavior: 'smooth' });
         },
     }
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 @mixin unselectable {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -123,12 +123,23 @@ export default {
 
     .home-favicon-animation {
         position: relative;
-        width: 56vw;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 100px;
+
+        h3, h4 {
+            z-index: 2;
+            position: relative;
+            top: 50px;
+            margin-left: 125px;
+        }
 
         h3 {
-            position: relative;
-            font-size: 3em;
-            z-index: 2;
+            width: 75%;
+            font-size: 2.5em;
+            margin-top: 0;
         }
     }
 
@@ -141,28 +152,12 @@ export default {
         h1 {
             position: relative;
             font-size: 7em;
-            margin: 50px 0 0;
+            margin: 0 0 100px;
             @include unselectable();
 
             &:hover {
                 span {
-                    bottom: -70px;
-                    left: 150px;
                     width: 30%;
-
-                    &:nth-of-type(1)::before {
-                        content: "That's me !";
-                        position: absolute;
-                        top: -30px;
-                        left: 25%;
-                        font-size: .15em;
-                        color: #557174;
-                    }
-
-                    &:nth-of-type(2),
-                    &:nth-of-type(3) {
-                        opacity: 1;
-                    }
                 }
             }
 
@@ -175,23 +170,6 @@ export default {
                 height: 15px;
                 background-color: #557174;
                 transition: all 0.3s ease-in-out, opacity .2s ease-in-out;
-
-                &:nth-of-type(2),
-                &:nth-of-type(3) {
-                    opacity: 0;
-                    bottom: 0;
-                    width: 10%;
-                    border-top-right-radius: 10px;
-                    border-bottom-right-radius: 10px;
-                }
-
-                &:nth-of-type(2) {
-                    transform: translateX(202px) translateY(44px) rotate(40deg);
-                }
-
-                &:nth-of-type(3) {
-                    transform: translateX(202px) translateY(96px) rotate(-40deg);
-                }
             }
         }
 

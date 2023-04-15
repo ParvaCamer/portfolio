@@ -94,6 +94,8 @@ $border-radius: 12px;
         top: 25px;
         right: 25px;
         width: 25px;
+        cursor: pointer;
+        z-index: 3;
     }
 
     .circle {
