@@ -127,7 +127,7 @@ header {
             }
 
             li {
-                padding: 10px 0 2px;
+                padding: 15px 0 2px;
                 font-size: 1.4em;
                 position: relative;
                 transition: all 0.3s ease-in-out;

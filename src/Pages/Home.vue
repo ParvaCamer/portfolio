@@ -14,11 +14,15 @@
                     }" />
             </div>
             <div class="home-container-flex">
-                <span></span>
-                <h1>Camerlynck Romain</h1>
+                <h1>Romain Camerlynck
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </h1>
                 <div class="home-container-logo-flex">
                     <LogoReachMe :style="changeLogoColor" />
                 </div>
+                <span></span>
             </div>
             <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -95,6 +99,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@mixin unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 .home-container {
     color: #a8b78b;
@@ -113,7 +123,7 @@ export default {
 
     .home-favicon-animation {
         position: relative;
-        width: 60vw;
+        width: 56vw;
 
         h3 {
             position: relative;
@@ -125,19 +135,70 @@ export default {
     .home-container-flex {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-evenly;
         height: auto;
 
         h1 {
             position: relative;
             font-size: 7em;
             margin: 50px 0 0;
+            @include unselectable();
+
+            &:hover {
+                span {
+                    bottom: -70px;
+                    left: 150px;
+                    width: 30%;
+
+                    &:nth-of-type(1)::before {
+                        content: "That's me !";
+                        position: absolute;
+                        top: -30px;
+                        left: 25%;
+                        font-size: .15em;
+                        color: #557174;
+                    }
+
+                    &:nth-of-type(2),
+                    &:nth-of-type(3) {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            span {
+                content: "";
+                position: absolute;
+                bottom: -30px;
+                left: 5px;
+                width: 25%;
+                height: 15px;
+                background-color: #557174;
+                transition: all 0.3s ease-in-out, opacity .2s ease-in-out;
+
+                &:nth-of-type(2),
+                &:nth-of-type(3) {
+                    opacity: 0;
+                    bottom: 0;
+                    width: 10%;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+
+                &:nth-of-type(2) {
+                    transform: translateX(202px) translateY(44px) rotate(40deg);
+                }
+
+                &:nth-of-type(3) {
+                    transform: translateX(202px) translateY(96px) rotate(-40deg);
+                }
+            }
         }
 
         .home-container-logo-flex {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 35px;
         }
     }
 

@@ -85,12 +85,11 @@ $color: #e4edcf;
         color: #000;
         transform: translateZ(0);
         transition: all 0.2s;
-        
+        box-shadow: 10px 10px 0px #a8b68b80;
 
         &:hover {
-            box-shadow: -5px 5px 40px #000000,
-            20px -20px 120px #F7F7E7;;
-            transform: translateY(-10px);   
+            box-shadow: 10px 10px 20px #6b745980;
+            transform: translate(10px, 10px);   
         }
 
         &:is(:hover, :focus-visible) {

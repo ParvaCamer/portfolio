@@ -21,6 +21,7 @@ export default {
 .skills-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: #f2e7e225;
     border-radius: 50%;
     padding: 15px;

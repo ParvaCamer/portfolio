@@ -29,7 +29,7 @@ export default {
     }
 
     100% {
-        left: 100%;
+        left: 90%;
     }
 }
 </style>

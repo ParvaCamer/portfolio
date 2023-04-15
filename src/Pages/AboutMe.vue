@@ -17,6 +17,11 @@
                         <path class="path-svg-text" fill="#F2E7E2"
                             d="M64,-45.4C79.6,-31.6,86.4,-5.2,79.8,15.9C73.1,37,53,52.6,33.8,56.8C14.5,60.9,-3.9,53.6,-25.4,45.8C-47,38.1,-71.8,30.1,-80.5,12.5C-89.2,-5.2,-82,-32.4,-65.9,-46.2C-49.8,-60.1,-24.9,-60.7,-0.3,-60.5C24.3,-60.2,48.5,-59.1,64,-45.4Z"
                             transform="translate(100 100)" />
+                        <svg class="svg-text svg-behind" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#F2E7E2"
+                                d="M63.7,-38.5C74.4,-18.2,69.4,9.5,56.2,26.4C43,43.3,21.5,49.4,-3.6,51.5C-28.8,53.6,-57.6,51.7,-71.1,34.7C-84.6,17.6,-82.9,-14.6,-68.5,-37.1C-54.1,-59.5,-27,-72.2,-0.3,-72C26.5,-71.8,52.9,-58.8,63.7,-38.5Z"
+                                transform="translate(100 100)" />
+                        </svg>
                     </svg>
                     <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack
                         developer
@@ -33,6 +38,10 @@
                 <path fill="#F2E7E2"
                     d="M68.8,-28.8C74.8,-3.9,55.4,22.8,31.4,39.3C7.4,55.8,-21.2,62.2,-42,49.1C-62.9,36.1,-75.9,3.6,-67.6,-24.5C-59.3,-52.5,-29.7,-76.2,0.9,-76.4C31.4,-76.7,62.8,-53.7,68.8,-28.8Z"
                     transform="translate(100 100)" />
+                <svg class="svg-behind" viewBox="10 10 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#F2E7E2" d="M56.4,-34.3C67.1,-14.2,65.4,11.3,54,28.7C42.5,46.1,21.3,55.3,-2.8,56.9C-26.9,58.5,-53.7,52.5,-64.9,35.4C-76,18.2,-71.3,-10.2,-57.9,-31.9C-44.5,-53.7,-22.2,-69,0.3,-69.2C22.9,-69.4,45.8,-54.5,56.4,-34.3Z" transform="translate(100 100)" />
+
+                </svg>
             </svg>
             <svg class="svg-right" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#F2E7E2"
@@ -46,6 +55,11 @@
                     <path fill="#F2E7E2"
                         d="M57.8,-57.4C69.3,-46.2,69.3,-23.1,68.1,-1.2C66.9,20.6,64.4,41.3,52.8,52.4C41.3,63.6,20.6,65.3,0.4,64.9C-19.9,64.5,-39.7,62,-53,50.9C-66.2,39.7,-72.8,19.9,-71,1.9C-69.1,-16.1,-58.8,-32.3,-45.5,-43.4C-32.3,-54.6,-16.1,-60.8,3.5,-64.2C23.1,-67.7,46.2,-68.5,57.8,-57.4Z"
                         transform="translate(100 100)" />
+                    <svg class="svg-behind" viewBox="0 0 199 197" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#F2E7E2"
+                            d="M53.7,-32.1C65.3,-11,67.3,14.5,56.7,36.3C46.2,58.2,23.1,76.4,2,75.2C-19.2,74.1,-38.3,53.7,-52.5,29.7C-66.7,5.7,-76,-21.7,-66.4,-41.6C-56.8,-61.6,-28.4,-74,-3.6,-71.8C21.1,-69.7,42.2,-53.1,53.7,-32.1Z"
+                            transform="translate(100 100)" />
+                    </svg>
                 </svg>
                 <img src="../assets/coding-guy-removebg.png" alt="coding-guy">
             </div>
@@ -77,6 +91,10 @@ export default {
     color: #e4edcf;
     background-color: #557174;
     overflow: hidden;
+
+    .svg-behind {
+        opacity: .3;
+    }
 
     .aboutme-container-whoami {
         display: flex;
@@ -174,6 +192,7 @@ export default {
             .aboutme-container-text {
                 position: relative;
                 height: 50vh;
+                margin-top: 30px;
 
                 .svg-text {
                     position: relative;
@@ -183,7 +202,7 @@ export default {
 
                 p {
                     position: absolute;
-                    top: 20px;
+                    top: 0px;
                     left: 350px;
                     width: 600px;
                     color: #a8b78b;
@@ -193,8 +212,6 @@ export default {
                     line-height: 5vh;
                 }
             }
-
-
         }
 
         .svg-container {

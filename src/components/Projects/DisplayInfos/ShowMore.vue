@@ -2,6 +2,7 @@
     <Teleport to="body">
         <div class="container-show-more" @click="hideShowMore"></div>
         <div class="card-show-more">
+            <img class="xmark" src="../../../assets/xmark.svg" alt="xmark" @click="hideShowMore">
             <div class="circle left-side-circle"></div>
             <div class="circle right-side-circle"></div>
             <div class="left-side">
@@ -86,6 +87,13 @@ $border-radius: 12px;
 
     ::-webkit-scrollbar {
         display: none;
+    }
+
+    .xmark {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        width: 25px;
     }
 
     .circle {
