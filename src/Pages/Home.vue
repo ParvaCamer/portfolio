@@ -158,8 +158,11 @@ export default {
             font-size: 7vw;
             margin: 0 0 100px;
             @include unselectable();
+            transition: all .3s;
 
             &:hover {
+                z-index: 3;
+
                 span {
                     width: 30%;
                 }
