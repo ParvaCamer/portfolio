@@ -5,10 +5,11 @@
             <div class="home-favicon-animation">
                 <h3>Vue.Js / React Front-end and Fullstack .NET developer, living in Lille in France.</h3>
                 <h4>- All of my projects are here -</h4>
-                <span></span>
+                <div class="home-container-logo-flex">
+                    <LogoReachMe :style="changeLogoColor" />
+                </div>
                 <Favicon v-for="(icon, index) in icons" :src="icon.url" :key="icon.name" :index="index"
-                    @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))" 
-                    :style="{
+                    @click="scrollTo(icon.name.replace(/ /g, '').slice(0, -4))" :style="{
                         transform: icon.rotate,
                         width: icon.width,
                         opacity: icon.opacity,
@@ -20,10 +21,6 @@
                 <h1>Romain Camerlynck
                     <span></span>
                 </h1>
-                <div class="home-container-logo-flex">
-                    <LogoReachMe :style="changeLogoColor" />
-                </div>
-                <span></span>
             </div>
             <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -60,7 +57,7 @@ export default {
                 width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
                 rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
-                left: Math.random() * (150 - 5) + 5 + 'px'
+                left: Math.random() * (150 - 10) + 10 + 'px'
             };
         });
     },
@@ -83,7 +80,7 @@ export default {
                 '--width': '30px'
             }
         },
-        
+
     },
     methods: {
         hideMenu() {
@@ -127,19 +124,25 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-left: 100px;
+        padding-left: 250px;
 
-        h3, h4 {
+        h3,
+        h4 {
             z-index: 2;
             position: relative;
-            top: 50px;
-            margin-left: 125px;
         }
 
         h3 {
-            width: 75%;
+            width: 95%;
             font-size: 2.5em;
             margin-top: 0;
+        }
+
+        .home-container-logo-flex {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 35px;
         }
     }
 
@@ -151,7 +154,7 @@ export default {
 
         h1 {
             position: relative;
-            font-size: 7em;
+            font-size: 7vw;
             margin: 0 0 100px;
             @include unselectable();
 
@@ -172,17 +175,11 @@ export default {
                 transition: all 0.3s ease-in-out, opacity .2s ease-in-out;
             }
         }
-
-        .home-container-logo-flex {
-            display: flex;
-            align-items: center;
-            gap: 35px;
-        }
     }
 
     .picture-profile-image {
         position: absolute;
-        width: 500px;
+        width: 25%;
         right: 0;
         bottom: 40px;
         filter: drop-shadow(25px -10px 20px #4d4d4d);

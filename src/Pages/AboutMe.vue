@@ -23,12 +23,13 @@
                                 transform="translate(100 100)" />
                         </svg>
                     </svg>
+
                     <p>I am a self-taught Frontend developer since {{ displayYear(2020) }} years and a Fullstack
                         developer
                         since
-                        {{ displayYear(2023) }} years. I started to learn by myself, then I did a program for Frontend
-                        developer
-                        by OpenClassrooms, an online bootcamp, in 2022. Finally, I am doing an other bootcamp to be
+                        {{ displayYear(2023) }} years. I started to learn by myself, then I did a program
+                        with OpenClassrooms, an online bootcamp, to get a Front-End developer professional certification, in
+                        2022. Finally, I am doing an other bootcamp to be
                         Fullstack
                         developer by M2iFormation. I am also a freelance since September 2021.
                     </p>
@@ -39,7 +40,9 @@
                     d="M68.8,-28.8C74.8,-3.9,55.4,22.8,31.4,39.3C7.4,55.8,-21.2,62.2,-42,49.1C-62.9,36.1,-75.9,3.6,-67.6,-24.5C-59.3,-52.5,-29.7,-76.2,0.9,-76.4C31.4,-76.7,62.8,-53.7,68.8,-28.8Z"
                     transform="translate(100 100)" />
                 <svg class="svg-behind" viewBox="10 10 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="#F2E7E2" d="M56.4,-34.3C67.1,-14.2,65.4,11.3,54,28.7C42.5,46.1,21.3,55.3,-2.8,56.9C-26.9,58.5,-53.7,52.5,-64.9,35.4C-76,18.2,-71.3,-10.2,-57.9,-31.9C-44.5,-53.7,-22.2,-69,0.3,-69.2C22.9,-69.4,45.8,-54.5,56.4,-34.3Z" transform="translate(100 100)" />
+                    <path fill="#F2E7E2"
+                        d="M56.4,-34.3C67.1,-14.2,65.4,11.3,54,28.7C42.5,46.1,21.3,55.3,-2.8,56.9C-26.9,58.5,-53.7,52.5,-64.9,35.4C-76,18.2,-71.3,-10.2,-57.9,-31.9C-44.5,-53.7,-22.2,-69,0.3,-69.2C22.9,-69.4,45.8,-54.5,56.4,-34.3Z"
+                        transform="translate(100 100)" />
 
                 </svg>
             </svg>
@@ -191,7 +194,7 @@ export default {
 
             .aboutme-container-text {
                 position: relative;
-                height: 50vh;
+                height: 60vh;
                 margin-top: 30px;
 
                 .svg-text {

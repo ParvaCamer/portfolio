@@ -39,6 +39,7 @@ body {
   font-family: 'Bebas Neue', cursive;
   font-family: 'Playfair Display', serif;
   letter-spacing: 2px;
+  font-size: 16px;
 }
 
 #app {
