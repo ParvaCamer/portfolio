@@ -46,5 +46,6 @@ body {
   height: 100vh;
   margin: 0;
   background-color: #F7F7E8;
+  overflow-x: hidden;
 }
 </style>

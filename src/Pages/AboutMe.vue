@@ -211,7 +211,7 @@ export default {
                     color: #a8b78b;
                     text-align: justify;
                     padding: 25px 50px;
-                    font-size: 1.35em;
+                    font-size: 1.15em;
                     line-height: 5vh;
                 }
             }

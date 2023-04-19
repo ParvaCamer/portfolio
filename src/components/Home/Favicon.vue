@@ -1,5 +1,5 @@
 <template>
-  <img class="animated-image" :style="{ transform: rotate }">
+  <img class="animated-image" alt="animated images">
 </template>
 
 <script>
@@ -19,14 +19,6 @@ export default {
   position: absolute;
   cursor: pointer;
   transition: all .4s;
-
-  --rotate-value: {
-      {
-      getRotate
-    }
-  }
-
-  ;
 
   &:hover {
     animation-play-state: paused;

@@ -82,7 +82,7 @@ export default {
                         title: 'First Project VueJs',
                         languages: ['HTML', 'CSS', 'JavaScript', 'VueJs'],
                         description: 'A project made with a VueJs course on Udemy. I had to create a simple turn-based game',
-                        url: 'https://parvacamer.github.io/FirstProjectUdemy-VueJs/',
+                        url: 'https://parvacamer.github.io/FirstProjectUdemy-Vue.Js/',
                         github: 'https://github.com/ParvaCamer/FirstProjectUdemy-Vue.Js'
                     },
                     {
@@ -105,6 +105,13 @@ export default {
                         description: 'The last and main project with the VueJs course on Udemy. The objective was to be able to authenticate as a coach in order to be able to create a profile there. The visitor can therefore consult the information of each coach as well as contact them',
                         url: 'https://main-project-udemy-vuejs.netlify.app/',
                         github: 'https://github.com/ParvaCamer/MainProjectUdemy-Vue.Js'
+                    },
+                    {
+                        title: 'First Project Pinia',
+                        languages: ['VueJs', 'Pinia', 'Vite', 'CSS'],
+                        description: 'The project I worked on was a todo-list application built using Vue.js and Pinia. This was primarily a learning exercise aimed at helping me gain experience with Pinia for state management in Vue.js applications. The app itself allowed users to add, delete, and favorite tasks. It was designed to be simple and intuitive, with dynamic updates based on user actions like sorting tasks by favorites or deleting tasks.',
+                        url: 'https://first-project-pinia.netlify.app/',
+                        github: 'https://github.com/ParvaCamer/FirstProject-Pinia'
                     }
                 ],
                 'projects for my professional certificates': [
@@ -138,7 +145,7 @@ export default {
                     },
                     {
                         title: 'Quote Generator',
-                        languages: ['HTML', 'CSS', 'JavaScript'],
+                        languages: ['HTML', 'Bootstrap', 'JavaScript'],
                         description: 'During my beginner-level training with OpenClassrooms bootcamp, I was tasked with creating a quote generator. This project challenged me to think creatively and apply my newfound skills in programming to create a user-friendly tool that generates random quotes on various topics. I learned a lot from this project and was proud to see it come to life.',
                         url: 'https://parvacamer.github.io/OpenClassroomsP5/',
                         github: 'https://github.com/ParvaCamer/OpenClassroomsP5'

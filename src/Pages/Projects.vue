@@ -13,7 +13,7 @@
                 <span></span>
             </div>
             <div class="display-projects-flex">
-                <DisplayProjects v-for="window in project" :key="window.id" :index="window.id" :url="window.url"
+                <DisplayProjects v-for="window in project" :key="window.id" :url="window.url"
                     :title="window.title" :description="window.description" :github="window.github"
                     :languages="window.languages" />
             </div>

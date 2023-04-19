@@ -1,13 +1,13 @@
 <template>
     <div class="component-projects-container">
         <div class="card">
-            <a :href=url target="_blank">
+            <a :href=url target="_blank" aria-label="let's see the project">
                 <img :src="imageUrl" :alt="imageAlt" class="card__img">
             </a>
             <span class="card__footer">
                 <span> {{ title }} </span>
                 <span>
-                    <a class="read-more" @click="showMore">
+                    <a class="read-more" @click="showMore" aria-label="show more informations">
                         Read more
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
@@ -17,7 +17,7 @@
                     </a>
                 </span>
             </span>
-            <a target="_blank" :href="github">
+            <a target="_blank" :href="github" aria-label="go on my github">
                 <span class="card__action">
                     <svg xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 496 512"><!--! Font Awesome Pro 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->

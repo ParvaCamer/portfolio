@@ -10,7 +10,7 @@ export default {
     props: ['name'],
     data() {
         return {
-            imageUrl: new URL(`/src/assets/skills/${this.name.toLowerCase()}.png`, import.meta.url).href,
+            imageUrl: new URL(`/src/assets/skills/${this.name.toLowerCase()}.webp`, import.meta.url).href,
             imageAlt: `${this.name} picture`
         }
     }

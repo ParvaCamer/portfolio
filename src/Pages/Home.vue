@@ -22,7 +22,7 @@
                     <span></span>
                 </h1>
             </div>
-            <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
+            <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile"/>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#557174" fill-opacity="1"
                     d="M0,32L48,69.3C96,107,192,181,288,229.3C384,277,480,299,576,272C672,245,768,171,864,165.3C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -51,7 +51,6 @@ export default {
         const iconFiles = import.meta.glob('/src/assets/favicon/*');
         this.icons = Object.keys(iconFiles).map(key => {
             const fileName = key.split('/').pop();
-            console.log(fileName)
             return {
                 name: fileName,
                 url: new URL(key, import.meta.url).href,
@@ -111,7 +110,6 @@ export default {
     overflow: hidden;
     display: flex;
 
-
     .logo-image {
         width: 50px;
         position: absolute;
@@ -126,6 +124,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         padding-left: 250px;
+        gap: 10px;
 
         h3,
         h4 {
@@ -135,8 +134,12 @@ export default {
 
         h3 {
             width: 95%;
-            font-size: 2.5em;
+            font-size: 2.5vw;
             margin-top: 0;
+        }
+
+        h4 {
+            font-size: .85vw;
         }
 
         .home-container-logo-flex {
@@ -150,13 +153,13 @@ export default {
     .home-container-flex {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         height: auto;
 
         h1 {
             position: relative;
-            font-size: 7vw;
-            margin: 0 0 100px;
+            font-size: 6vw;
+            margin: 0 0 50px;
             @include unselectable();
             transition: all .3s;
 
@@ -183,8 +186,7 @@ export default {
 
     .picture-profile-image {
         position: absolute;
-        width: 25%;
-        right: 0;
+        right: 0px;
         bottom: 40px;
         filter: drop-shadow(25px -10px 20px #4d4d4d);
     }
