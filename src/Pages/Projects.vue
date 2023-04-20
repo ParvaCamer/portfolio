@@ -74,7 +74,7 @@ export default {
                 margin: 0;
                 padding: 0 20px;
                 color: #a8b78b;
-                text-align: left;
+                text-align: center;
                 font-size: 1.7rem;
             }
         }
@@ -86,4 +86,23 @@ export default {
             padding-bottom: 45px;
         }
     }
-}</style>
+}
+@media screen and (max-width: 576px) {
+    .projects-container .h2 {
+        margin: 100px 0 0 10px;
+    }
+    .projects-container .display-projects {
+        margin: 35px 0 50px;
+
+        .display-projects-h2 {
+            h2 {
+                font-size: 1.25em;
+                padding: 0 10px;
+            }
+            span {
+                width: 35px;
+            }
+        }
+    }
+}
+</style>

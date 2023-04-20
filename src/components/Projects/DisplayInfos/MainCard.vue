@@ -172,5 +172,10 @@ $color: #e4edcf;
             }
         }
     }
+    @media screen and (max-width: 576px) {
+    .card__footer span:nth-of-type(1) {
+        font-size: calc(var(--size) * 0.055) !important;
+    }
+}
 }
 </style>

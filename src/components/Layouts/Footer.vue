@@ -124,11 +124,25 @@ footer {
     .footer .row ul li {
         display: block;
         margin: 10px 0px;
-        text-align: left;
     }
 
     .footer .row a i {
         margin: 0% 3%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    footer .footer .row.flex {
+        margin-top: 60px;
+    }
+    footer .svg-top {
+        top: -1px;
+    }
+    .footer .row ul {
+        margin: 30px 0;
+    }
+    footer .footer .row ul li {
+        margin: 0 auto;
     }
 }
 </style>
