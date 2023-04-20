@@ -4,12 +4,6 @@
 
 <script>
 export default {
-  props: ['rotate'],
-  computed: {
-    getRotate() {
-      return this.rotate;
-    }
-  }
 }
 </script>
 
