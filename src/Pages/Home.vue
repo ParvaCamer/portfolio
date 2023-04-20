@@ -48,7 +48,7 @@ export default {
         LogoReachMe
     },
     created() {
-        const iconFiles = import.meta.glob('/src/assets/skills/*');
+        const iconFiles = import.meta.glob('./../assets/skills/*');
         this.icons = Object.keys(iconFiles).map(key => {
             const fileName = key.split('/').pop();
             return {
