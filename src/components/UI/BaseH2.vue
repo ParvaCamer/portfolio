@@ -15,7 +15,7 @@ h2 {
     font-size: 7em;
     user-select: none;
     opacity: .4;
-    background: linear-gradient(to bottom, transparent 10%, var(--gradient-color) 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--gradient-color) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
