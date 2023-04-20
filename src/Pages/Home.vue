@@ -48,12 +48,12 @@ export default {
         LogoReachMe
     },
     created() {
-        const iconFiles = import.meta.glob('/src/assets/favicon/*');
+        const iconFiles = import.meta.globEager('/src/assets/favicon/*');
         this.icons = Object.keys(iconFiles).map(key => {
             const fileName = key.split('/').pop();
             return {
                 name: fileName,
-                url: new URL(key, import.meta.url).href,
+                url: iconFiles[key].default,
                 width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
                 rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
