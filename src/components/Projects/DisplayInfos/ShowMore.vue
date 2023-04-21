@@ -209,6 +209,42 @@ $border-radius: 12px;
     }
 }
 
+@media screen and (max-width: 576px) {
+    .card-show-more {
+        flex-direction: column;
+        width: 90vw;
+        height: 85vh;
+    }
+
+    .card-show-more .xmark {
+        top: 5px;
+    }
+
+    .card-show-more .left-side {
+        width: 100%;
+        height: 300px;
+    }
+
+    .card-show-more .left-side h2 {
+        padding: 0;
+    }
+
+    .card-show-more .left-side .img-favicon{
+        width: 150px;
+    }
+
+    .card-show-more .right-side {
+        margin-top: -25px;
+        width: 100%;
+    }
+
+    .card-show-more .right-side h2 {
+        padding-left: 0;
+        text-align: center;
+        font-size: 1.25em;
+    }
+}
+
 /*** Languages ***/
 .HTML {
     background-color: #F16529;
