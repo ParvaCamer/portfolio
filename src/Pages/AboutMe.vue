@@ -275,6 +275,14 @@ export default {
         top: -25px;
     }
 
+    .aboutme-container .aboutme-container-whoami .a-button, .aboutme-container .aboutme-container-whoami .button {
+        width: 175px;
+    }
+
+    .aboutme-container .aboutme-container-whoami a .button {
+        font-size: .85em;
+    }
+
     .aboutme-container .aboutme-container-whoami .aboutme-container-flex .aboutme-container-text {
         width: 100vw;
     }
