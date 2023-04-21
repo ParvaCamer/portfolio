@@ -220,7 +220,7 @@ export default {
 
     .home-container .home-favicon-animation h4 {
         width: 100%;
-        font-size: .8em;
+        font-size: 2vw;
     }
 
     .home-container .home-container-flex {

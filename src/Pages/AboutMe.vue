@@ -286,8 +286,8 @@ export default {
     .aboutme-container .aboutme-container-whoami .aboutme-container-flex .aboutme-container-text p {
         left: 0;
         width: auto;
-        padding: 55px 15px;
-        font-size: 1em;
+        padding: 65px 20px;
+        font-size: .9em;
         line-height: 2.5vh;
     }
 
