@@ -156,4 +156,13 @@ export default {
         text-align: center;
     }
 }
+
+@media screen and (max-width: 576px) {
+    .display-skills-container {
+        margin: 0;
+        margin-bottom: 10px;
+        padding-left: 25px;
+        width: 100%;
+    }
+}
 </style>

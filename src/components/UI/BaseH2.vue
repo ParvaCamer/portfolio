@@ -25,6 +25,7 @@ export default {
 @media screen and (max-width: 576px) {
     .gradient-title {
         font-size: 3.5em;
+        padding: 50px 0 20px 10px;
     }
 }
 

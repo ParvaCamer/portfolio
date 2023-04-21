@@ -29,14 +29,12 @@ a {
 
     img {
         width: var(--width);
-        min-width: 20px;
-        min-height: 20px;
         filter: var(--color);
         transition: filter .5s;
 
         &:hover {
             filter: var(--color-hover);
         }
-    }
+    }    
 }
 </style>

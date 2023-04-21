@@ -251,4 +251,53 @@ export default {
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    .aboutme-container .aboutme-container-whoami {
+        display: block;
+    }
+
+    .aboutme-container .aboutme-container-whoami .svg-top {
+        top: -50px;
+        right: -55px;
+    }
+
+    .aboutme-container .aboutme-container-whoami .svg-right {
+        display: none;
+    }
+
+    .aboutme-container .aboutme-container-whoami .svg-container {
+        left: -325px;
+        top: 400px;
+    }
+    .aboutme-container .aboutme-container-whoami a {
+        right: 10px;
+        top: -25px;
+    }
+
+    .aboutme-container .aboutme-container-whoami .aboutme-container-flex .aboutme-container-text {
+        width: 100vw;
+    }
+
+    .aboutme-container .aboutme-container-whoami .aboutme-container-flex .aboutme-container-text .svg-text {
+        width: 600px;
+        transform: translateX(-125px) translateY(-100px) rotate(3deg);
+    }
+    .aboutme-container .aboutme-container-whoami .aboutme-container-flex .aboutme-container-text p {
+        left: 0;
+        width: auto;
+        padding: 55px 15px;
+        font-size: 1em;
+        line-height: 2.5vh;
+    }
+
+    .aboutme-container .aboutme-container-skills {
+        flex-direction: column;
+    }
+    .aboutme-container .aboutme-container-skills .aboutme-container-skills-coding {
+        width: 125%;
+        padding: 100px 0 0;
+        margin: 0 0 -50px 0;
+    }
+}
 </style>
