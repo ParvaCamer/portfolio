@@ -22,7 +22,7 @@
                     <span></span>
                 </h1>
             </div>
-            <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile"/>
+            <img class="picture-profile-image" src="../assets/picture-profile.png" alt="picture profile" />
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#557174" fill-opacity="1"
                     d="M0,32L48,69.3C96,107,192,181,288,229.3C384,277,480,299,576,272C672,245,768,171,864,165.3C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
@@ -51,11 +51,14 @@ export default {
         const iconFiles = import.meta.globEager('/src/assets/favicon/*');
         this.icons = Object.keys(iconFiles).map(key => {
             const fileName = key.split('/').pop();
+            let width = Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px';
+            if (window.innerWidth < 576) {
+                width = Math.floor(Math.random() * (65 - 55 + 1) + 55) + 'px';
+            }
             return {
                 name: fileName,
                 url: iconFiles[key].default,
-                width: Math.floor(Math.random() * (100 - 75 + 1) + 75) + 'px',
-                rotate: 'rotate(' + Math.floor(Math.random() * (50 - (-30) + 1) + (-30)) + 'deg)',
+                width: width,
                 opacity: Math.random() * (0.5 - 0.3) + 0.3,
                 left: Math.random() * (150 - 10) + 10 + 'px'
             };
@@ -194,6 +197,51 @@ export default {
     svg {
         position: absolute;
         bottom: -5px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home-container .logo-image {
+        left: 15px;
+    }
+
+    .home-container .home-favicon-animation {
+        padding-left: 10px;
+        margin-top: auto;
+        margin-bottom: 100px;
+        width: auto;
+        gap: 0;
+    }
+
+    .home-container .home-favicon-animation h3 {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .home-container .home-favicon-animation h4 {
+        width: 100%;
+        font-size: .8em;
+    }
+
+    .home-container .home-container-flex {
+        margin-left: auto;
+    }
+
+    .home-container .home-container-flex h1 {
+        font-size: 7.5vw;
+        margin: 0 0 125px;
+        padding-right: 25px;
+    }
+
+    .home-container .home-container-flex h1 span {
+        height: 10px;
+        bottom: -20px;
+    }
+
+    .home-container .picture-profile-image {
+        width: 75%;
+        bottom: 0;
+        right: -50px;
     }
 }
 </style>

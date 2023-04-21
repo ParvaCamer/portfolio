@@ -28,4 +28,5 @@ export default {
   to {
     transform: translateY(90vh);
   }
-}</style>
+}
+</style>
