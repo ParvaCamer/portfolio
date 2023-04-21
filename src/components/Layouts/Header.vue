@@ -200,4 +200,22 @@ header {
         }
     }
 }
+
+@media screen and (max-width: 576px) {
+    header .menu-burger .menu-items {
+        top: -10px;
+        right: 50px;
+    }
+    header .menu-burger .menu-items li {
+        font-size: 1.55em;
+        padding: 20px 0 2px;
+    }
+
+    header .burger-circle {
+        height: 500px;
+        width: 500px;
+        top: -175px;
+        right: -175px;
+    }
+}
 </style>
