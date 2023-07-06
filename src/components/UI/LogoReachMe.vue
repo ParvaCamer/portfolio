@@ -29,6 +29,7 @@ a {
 
     img {
         width: var(--width);
+        height: 100%;
         filter: var(--color);
         transition: filter .5s;
 
