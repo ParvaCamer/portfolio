@@ -64,7 +64,7 @@
                             transform="translate(100 100)" />
                     </svg>
                 </svg>
-                <img src="../assets/coding-guy-removebg.png" alt="coding-guy">
+                <img src="../assets/coding-guy-removebg.webp" alt="coding-guy">
             </div>
             <DisplaySkills />
         </div>
