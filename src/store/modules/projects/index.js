@@ -21,9 +21,16 @@ export default {
                 ],
                 'individual projects': [
                     {
+                        title: 'Products Circle',
+                        languages: ['VueJs', 'SCSS', 'ApiRestful', 'Vite'],
+                        description: "I developed an interactive dashboard with a fake API, enabling users to view and update product prices. The dashboard included features like product visualization, filtering, and responsive design. I collaborated on backend implementation for real-time price updates. I also contributed to visual design and API integration.",
+                        url: 'https://products-circle.netlify.app/',
+                        github: 'https://github.com/ParvaCamer/products-circle'
+                    },
+                    {
                         title: 'Wedding Sharing',
                         languages: ['VueJs', 'Vue-Router', 'CSS', 'Firebase', 'ApiRestful', 'Vite', 'Encrypted-Data'],
-                        description: "A website for storing and downloading images. Specialized in wedding theme. Admin can create space, add, delete or edit the images. Each space is protected. The administrator can give the rights to visitors to also add photos, or restrict them to downloading only. We were two for this project: <a href='https://github.com/KonisDesign'>Julien Devos</a> who took care of the design and CSS, and myself who follows me busy with the rest. If you have a problem with downloading, it's the CORS Policy that prevents you from doing so. I don't have a solution at the moment.",
+                        description: "A website for storing and downloading images. Specialized in wedding theme. Admin can create space, add, delete or edit the images. Each space is protected. The administrator can give the rights to visitors to also add photos, or restrict them to downloading only. We were two for this project: Julien Devos who took care of the design and CSS, and myself who follows me busy with the rest. If you have a problem with downloading, it's the CORS Policy that prevents you from doing so. I don't have a solution at the moment.",
                         url: 'https://wedding-sharing.netlify.app/',
                         github: 'https://github.com/ParvaCamer/wedding-sharing'
                     },
