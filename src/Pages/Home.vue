@@ -22,7 +22,7 @@
                     <span></span>
                 </h1>
             </div>
-            <img class="picture-profile-image" src="../assets/picture-profile.webp" alt="picture profile" />
+            <img class="picture-profile-image" src="../assets/picture-profile.webp" alt="picture profile" loading="lazy"/>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
                 <path fill="#557174" fill-opacity="1"
                     d="M0,32L48,69.3C96,107,192,181,288,229.3C384,277,480,299,576,272C672,245,768,171,864,165.3C960,160,1056,224,1152,240C1248,256,1344,224,1392,208L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
