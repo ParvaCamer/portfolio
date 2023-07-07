@@ -1,5 +1,5 @@
 <template>
-    <div class="aboutme-container">
+    <div id="aboutme" class="aboutme-container">
         <div class="aboutme-container-whoami">
             <svg class="svg-top" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#F2E7E2"

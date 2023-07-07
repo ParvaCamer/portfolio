@@ -1,6 +1,6 @@
 <template>
     <footer @click="hideMenu">
-        <div class="footer">
+        <div id="contact" class="footer">
             <div class="row flex">
                 <LogoReachMe :style="changeLogoColor"/>
             </div>

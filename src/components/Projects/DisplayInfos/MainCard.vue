@@ -7,7 +7,7 @@
             <span class="card__footer">
                 <span> {{ title }} </span>
                 <span>
-                    <a class="read-more" @click="showMore" aria-label="show more informations">
+                    <a class="read-more" @click="showMore" aria-label="show more informations" href="#">
                         Read more
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd"
